@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+    PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+    "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+	<mapper namespace="com.tyn.bnk.persistence.SimpleMapper">
+
+	<select id="justSelect" resultType="map">
+		 select
+			 to_char(emp_no) as emp_no           
+			,emp_nm        
+			,dept_code     
+			,rol_position  
+			,to_char(join_date) as join_date
+			,to_char(retire_date) as retire_date  
+			,sal_type  
+			,to_char(month_sal) as month_sal   
+			,to_char(reg_date) as retire_date  
+		 from 
+			 tbl_emp
+	</select>
+
+</mapper>
