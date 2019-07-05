@@ -19,4 +19,21 @@
 			 tbl_emp
 	</select>
 
+
+	<select id="getEmpInfo" resultType="map" parameterType="string">
+		 select
+			 to_char(emp_no) as emp_no           
+			,emp_nm        
+			,dept_code     
+			,rol_position  
+			,to_char(join_date) as join_date
+			,to_char(retire_date) as retire_date  
+			,sal_type  
+			,to_char(month_sal) as month_sal   
+			,to_char(reg_date) as retire_date  
+		 from 
+			 tbl_emp
+		 where
+		 	emp_no = #{emp_no}
+	</select>
 </mapper>

@@ -21,4 +21,10 @@ public class SimpleServiceImpl implements SimpleService {
 		return mapper.justSelect();
 	}
 
+	@Override
+	public Map<String, String> getEmpInfo(String emp_no) {
+		// TODO Auto-generated method stub
+		return mapper.getEmpInfo(emp_no);
+	}
+
 }

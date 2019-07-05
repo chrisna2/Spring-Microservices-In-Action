@@ -8,6 +8,10 @@ import org.apache.ibatis.annotations.Mapper;
 @Mapper
 public interface SimpleMapper {
 	
-	public List<Map<String, String>> justSelect();
+	public List<Map<String, Object>> justSelect();
+	
+	public List<Map<String, Object>> srchMember(String m_id);
+	
+	public List<Map<String, Object>> srchMemberByDept(int m_grade);
 
 }

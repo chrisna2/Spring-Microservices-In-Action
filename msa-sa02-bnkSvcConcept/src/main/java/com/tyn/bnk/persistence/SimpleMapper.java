@@ -9,5 +9,7 @@ import org.apache.ibatis.annotations.Mapper;
 public interface SimpleMapper {
 	
 	public List<Map<String, String>> justSelect();
+	
+	public Map<String, String> getEmpInfo(String emp_no);
 
 }
