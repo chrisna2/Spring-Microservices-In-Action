@@ -169,3 +169,15 @@
 2019-07-05 17:32:03.394  INFO 17780 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
 2019-07-05 17:37:03.396  INFO 17780 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
 2019-07-05 17:42:03.398  INFO 17780 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2019-07-05 17:47:03.401  INFO 17780 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2019-07-05 17:47:25.857  WARN 17780 --- [RMI TCP Connection(91)-127.0.0.1] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1562316445857, current=DOWN, previous=UP]
+2019-07-05 17:47:25.858  INFO 17780 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_CONCEPT/localhost:concept:8085: registering service...
+2019-07-05 17:47:25.871  INFO 17780 --- [RMI TCP Connection(91)-127.0.0.1] com.netflix.discovery.DiscoveryClient    : Shutting down DiscoveryClient ...
+2019-07-05 17:47:25.882  INFO 17780 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_CONCEPT/localhost:concept:8085 - registration status: 204
+2019-07-05 17:47:25.883  INFO 17780 --- [RMI TCP Connection(91)-127.0.0.1] com.netflix.discovery.DiscoveryClient    : Unregistering ...
+2019-07-05 17:47:25.910  INFO 17780 --- [RMI TCP Connection(91)-127.0.0.1] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_CONCEPT/localhost:concept:8085 - deregister  status: 200
+2019-07-05 17:47:25.924  INFO 17780 --- [RMI TCP Connection(91)-127.0.0.1] com.netflix.discovery.DiscoveryClient    : Completed shut down of DiscoveryClient
+2019-07-05 17:47:25.924  INFO 17780 --- [RMI TCP Connection(91)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2019-07-05 17:47:25.938  INFO 17780 --- [RMI TCP Connection(91)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2019-07-05 17:47:26.927  INFO 17780 --- [RMI TCP Connection(91)-127.0.0.1] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2019-07-05 17:47:26.932  INFO 17780 --- [RMI TCP Connection(91)-127.0.0.1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Destroying Spring FrameworkServlet 'dispatcherServlet'
