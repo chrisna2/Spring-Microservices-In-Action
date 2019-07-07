@@ -4,6 +4,8 @@ import org.springframework.stereotype.Component;
 
 @Component
 public class UserContext {
+//사용자 정보를 관리하는 DTO
+	
     public static final String CORRELATION_ID = "tmx-correlation-id";
     public static final String AUTH_TOKEN     = "tmx-auth-token";
     public static final String USER_ID        = "tmx-user-id";

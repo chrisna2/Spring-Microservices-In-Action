@@ -10,11 +10,14 @@ import org.springframework.cloud.openfeign.EnableFeignClients;
 import org.springframework.context.annotation.Bean;
 import org.springframework.web.client.RestTemplate;
 
-@EnableFeignClients
-@EnableEurekaClient
-@EnableCircuitBreaker
-@EnableDiscoveryClient
+//2장
 @SpringBootApplication
+//4장+
+@EnableEurekaClient
+@EnableFeignClients
+@EnableDiscoveryClient
+//5장+
+@EnableCircuitBreaker
 public class MsaSa02BnkSvcHarangApplication {
 	
 	@Bean

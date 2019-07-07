@@ -5,6 +5,8 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -14,9 +16,12 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.tyn.bnk.service.SimpleService;
+import com.tyn.bnk.utils.UserContextHolder;
 
 @RestController
 public class SimpleClientController {
+	
+	private static final Logger logger = LoggerFactory.getLogger(SimpleClientController.class);
 	
 	@Autowired
 	SimpleService service;
@@ -72,6 +77,8 @@ public class SimpleClientController {
 	
 	@RequestMapping(value="/memberbygrade/{m_grade}" , method = RequestMethod.GET)
 	ResponseEntity<List<Map<String,Object>>> srchMemberByGrade(@PathVariable("m_grade")int m_grade){
+		
+		logger.info("Harang.SimpleClientController Correlation id: {}", UserContextHolder.getContext().getCorrelationId());
 		
 		ResponseEntity<List<Map<String,Object>>> response = null;
 		

@@ -15,6 +15,7 @@ import java.io.IOException;
 
 @Component
 public class UserContextFilter implements Filter {
+	
     private static final Logger logger = LoggerFactory.getLogger(UserContextFilter.class);
 
     @Override
@@ -24,12 +25,13 @@ public class UserContextFilter implements Filter {
 
         HttpServletRequest httpServletRequest = (HttpServletRequest) servletRequest;
 
-        UserContextHolder.getContext().setCorrelationId(  httpServletRequest.getHeader(UserContext.CORRELATION_ID) );
+        //Http 호출 헤더에서 검색한 값을 UserContextHolder의 UserContext에 저장한다.
+        UserContextHolder.getContext().setCorrelationId(httpServletRequest.getHeader(UserContext.CORRELATION_ID) );
         UserContextHolder.getContext().setUserId(httpServletRequest.getHeader(UserContext.USER_ID));
         UserContextHolder.getContext().setAuthToken(httpServletRequest.getHeader(UserContext.AUTH_TOKEN));
         UserContextHolder.getContext().setOrgId(httpServletRequest.getHeader(UserContext.ORG_ID));
 
-        logger.debug("UserContextFilter Correlation id: {}", UserContextHolder.getContext().getCorrelationId());
+        logger.info("Harang.UserContextFilter Correlation id: {}", UserContextHolder.getContext().getCorrelationId());
 
         filterChain.doFilter(httpServletRequest, servletResponse);
     }
