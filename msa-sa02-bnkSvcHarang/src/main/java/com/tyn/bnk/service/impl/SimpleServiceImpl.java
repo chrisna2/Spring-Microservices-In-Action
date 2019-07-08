@@ -22,12 +22,20 @@ import com.tyn.bnk.service.SimpleService;
 import com.tyn.bnk.utils.UserContextHolder;
 
 @Service
-//히스트릭스의 설정의 기본 값을 구성, 모든 메소드에 해당 설정이 적용된다.
+//히스트릭스의 설정의 기본 값을 구성, @HystrixCommand를 설정한 모든 메소드에 해당 설정이 적용된다.
 @DefaultProperties(
-			commandProperties = {
+			threadPoolKey = "defaultTreadPool",
+			threadPoolProperties = {
+					//스레드풀의 스레드 갯수를 정의
+					@HystrixProperty(name = "coreSize", value="30"),
+					//스레드풀 앞에 배치할 큐와 큐에 넣을 요청 수를 정의
+					@HystrixProperty(name = "maxQueueSize", value = "10")
+			}
+			/*
+			,commandProperties = {
 					//회로차단기의 타임아웃 시간(밀리초)을 설정하는 데 사용되는 timeoutInMilisecond 프로퍼티, 호출이 실패하기 전까지 대기할 최대 타임아웃 시간을 10초로 설정
 					@HystrixProperty(name = "execution.isolation.thread.timeoutInMiliseconds", value = "10000")
-			}
+			}*/
 		)
 public class SimpleServiceImpl implements SimpleService {
 	
@@ -113,6 +121,7 @@ public class SimpleServiceImpl implements SimpleService {
 	}
 	
 	@Override
+	//히스트릭스 개별 설정
 	@HystrixCommand(
 				//히스트릭스에서 호출이 실패할 때 불러오는 클래스 함수를 정의
 				fallbackMethod = "fallbackSrchMemberByGrade",
