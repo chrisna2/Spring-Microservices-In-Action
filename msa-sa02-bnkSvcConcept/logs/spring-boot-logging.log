@@ -1,155 +1,164 @@
-2019-07-08 00:03:17.072  INFO 6152 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
-2019-07-08 00:08:17.079  INFO 6152 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
-2019-07-08 00:13:17.085  INFO 6152 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
-2019-07-08 00:18:17.091  INFO 6152 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
-2019-07-08 00:23:17.102  INFO 6152 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
-2019-07-08 00:28:17.111  INFO 6152 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
-2019-07-08 00:33:17.117  INFO 6152 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
-2019-07-08 00:35:35.380  WARN 6152 --- [RMI TCP Connection(136)-127.0.0.1] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1562513735380, current=DOWN, previous=UP]
-2019-07-08 00:35:35.388  INFO 6152 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_CONCEPT/localhost:concept:8085: registering service...
-2019-07-08 00:35:35.400  INFO 6152 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_CONCEPT/localhost:concept:8085 - registration status: 204
-2019-07-08 00:35:35.424  INFO 6152 --- [RMI TCP Connection(136)-127.0.0.1] com.netflix.discovery.DiscoveryClient    : Shutting down DiscoveryClient ...
-2019-07-08 00:35:38.435  INFO 6152 --- [RMI TCP Connection(136)-127.0.0.1] com.netflix.discovery.DiscoveryClient    : Unregistering ...
-2019-07-08 00:35:38.449  INFO 6152 --- [RMI TCP Connection(136)-127.0.0.1] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_CONCEPT/localhost:concept:8085 - deregister  status: 200
-2019-07-08 00:35:38.476  INFO 6152 --- [RMI TCP Connection(136)-127.0.0.1] com.netflix.discovery.DiscoveryClient    : Completed shut down of DiscoveryClient
-2019-07-08 00:35:38.941  INFO 6152 --- [RMI TCP Connection(136)-127.0.0.1] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
-2019-07-08 00:35:38.954  INFO 6152 --- [RMI TCP Connection(136)-127.0.0.1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Destroying Spring FrameworkServlet 'dispatcherServlet'
-2019-07-08 01:05:05.379  INFO 7768 --- [main] c.t.bnk.MsaSa02BnkSvcConceptApplication  : The following profiles are active: default
-2019-07-08 01:05:07.043  INFO 7768 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2019-07-08 01:05:07.050  INFO 7768 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.21]
-2019-07-08 01:05:07.211  INFO 7768 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2019-07-08 01:05:07.336  WARN 7768 --- [main] c.n.c.sources.URLConfigurationSource     : No URLs will be polled as dynamic configuration sources.
-2019-07-08 01:05:07.336  INFO 7768 --- [main] c.n.c.sources.URLConfigurationSource     : To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
-2019-07-08 01:05:07.346  INFO 7768 --- [main] c.netflix.config.DynamicPropertyFactory  : DynamicPropertyFactory is initialized with configuration sources: com.netflix.config.ConcurrentCompositeConfiguration@161aa04a
-2019-07-08 01:05:08.896  WARN 7768 --- [main] c.n.c.sources.URLConfigurationSource     : No URLs will be polled as dynamic configuration sources.
-2019-07-08 01:05:08.903  INFO 7768 --- [main] c.n.c.sources.URLConfigurationSource     : To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
-2019-07-08 01:05:10.514  INFO 7768 --- [main] com.netflix.discovery.DiscoveryClient    : Initializing Eureka in region us-east-1
-2019-07-08 01:05:10.651  INFO 7768 --- [main] c.n.d.provider.DiscoveryJerseyProvider   : Using JSON encoding codec LegacyJacksonJson
-2019-07-08 01:05:10.657  INFO 7768 --- [main] c.n.d.provider.DiscoveryJerseyProvider   : Using JSON decoding codec LegacyJacksonJson
-2019-07-08 01:05:10.795  INFO 7768 --- [main] c.n.d.provider.DiscoveryJerseyProvider   : Using XML encoding codec XStreamXml
-2019-07-08 01:05:10.795  INFO 7768 --- [main] c.n.d.provider.DiscoveryJerseyProvider   : Using XML decoding codec XStreamXml
-2019-07-08 01:05:10.998  INFO 7768 --- [main] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
-2019-07-08 01:05:11.395  INFO 7768 --- [main] com.netflix.discovery.DiscoveryClient    : Disable delta property : false
-2019-07-08 01:05:11.401  INFO 7768 --- [main] com.netflix.discovery.DiscoveryClient    : Single vip registry refresh property : null
-2019-07-08 01:05:11.402  INFO 7768 --- [main] com.netflix.discovery.DiscoveryClient    : Force full registry fetch : false
-2019-07-08 01:05:11.408  INFO 7768 --- [main] com.netflix.discovery.DiscoveryClient    : Application is null : false
-2019-07-08 01:05:11.408  INFO 7768 --- [main] com.netflix.discovery.DiscoveryClient    : Registered Applications size is zero : true
-2019-07-08 01:05:11.414  INFO 7768 --- [main] com.netflix.discovery.DiscoveryClient    : Application version is -1: true
-2019-07-08 01:05:11.414  INFO 7768 --- [main] com.netflix.discovery.DiscoveryClient    : Getting all instance registry info from the eureka server
-2019-07-08 01:05:11.562  INFO 7768 --- [main] com.netflix.discovery.DiscoveryClient    : The response status is 200
-2019-07-08 01:05:11.565  INFO 7768 --- [main] com.netflix.discovery.DiscoveryClient    : Starting heartbeat executor: renew interval is: 30
-2019-07-08 01:05:11.575  INFO 7768 --- [main] c.n.discovery.InstanceInfoReplicator     : InstanceInfoReplicator onDemand update allowed rate per min is 4
-2019-07-08 01:05:11.579  INFO 7768 --- [main] com.netflix.discovery.DiscoveryClient    : Discovery Client initialized at timestamp 1562515511578 with initial instances count: 1
-2019-07-08 01:05:11.581  INFO 7768 --- [main] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1562515511581, current=UP, previous=STARTING]
-2019-07-08 01:05:11.585  INFO 7768 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_CONCEPT/DEVELOP:concept:8085: registering service...
-2019-07-08 01:05:11.644  INFO 7768 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_CONCEPT/DEVELOP:concept:8085 - registration status: 204
-2019-07-08 01:05:11.654  INFO 7768 --- [main] c.t.bnk.MsaSa02BnkSvcConceptApplication  : Started MsaSa02BnkSvcConceptApplication in 9.64 seconds (JVM running for 10.718)
-2019-07-08 01:05:13.237  INFO 7768 --- [RMI TCP Connection(4)-127.0.0.1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2019-07-08 01:10:11.418  INFO 7768 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
-2019-07-08 01:15:02.819  WARN 7768 --- [RMI TCP Connection(19)-127.0.0.1] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1562516102819, current=DOWN, previous=UP]
-2019-07-08 01:15:02.825  INFO 7768 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_CONCEPT/DEVELOP:concept:8085: registering service...
-2019-07-08 01:15:02.834  INFO 7768 --- [RMI TCP Connection(19)-127.0.0.1] com.netflix.discovery.DiscoveryClient    : Shutting down DiscoveryClient ...
-2019-07-08 01:15:02.839  INFO 7768 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_CONCEPT/DEVELOP:concept:8085 - registration status: 204
-2019-07-08 01:15:02.846  INFO 7768 --- [RMI TCP Connection(19)-127.0.0.1] com.netflix.discovery.DiscoveryClient    : Unregistering ...
-2019-07-08 01:15:02.852  INFO 7768 --- [RMI TCP Connection(19)-127.0.0.1] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_CONCEPT/DEVELOP:concept:8085 - deregister  status: 200
-2019-07-08 01:15:02.861  INFO 7768 --- [RMI TCP Connection(19)-127.0.0.1] com.netflix.discovery.DiscoveryClient    : Completed shut down of DiscoveryClient
-2019-07-08 01:15:03.160  INFO 7768 --- [RMI TCP Connection(19)-127.0.0.1] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
-2019-07-08 01:15:03.169  INFO 7768 --- [RMI TCP Connection(19)-127.0.0.1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Destroying Spring FrameworkServlet 'dispatcherServlet'
-2019-07-08 01:23:29.169  INFO 14496 --- [main] c.t.bnk.MsaSa02BnkSvcConceptApplication  : The following profiles are active: default
-2019-07-08 01:23:31.241  INFO 14496 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2019-07-08 01:23:31.251  INFO 14496 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.21]
-2019-07-08 01:23:31.417  INFO 14496 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2019-07-08 01:23:31.542  WARN 14496 --- [main] c.n.c.sources.URLConfigurationSource     : No URLs will be polled as dynamic configuration sources.
-2019-07-08 01:23:31.542  INFO 14496 --- [main] c.n.c.sources.URLConfigurationSource     : To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
-2019-07-08 01:23:31.555  INFO 14496 --- [main] c.netflix.config.DynamicPropertyFactory  : DynamicPropertyFactory is initialized with configuration sources: com.netflix.config.ConcurrentCompositeConfiguration@6419a0e1
-2019-07-08 01:23:32.936  WARN 14496 --- [main] c.n.c.sources.URLConfigurationSource     : No URLs will be polled as dynamic configuration sources.
-2019-07-08 01:23:32.942  INFO 14496 --- [main] c.n.c.sources.URLConfigurationSource     : To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
-2019-07-08 01:23:34.619  INFO 14496 --- [main] com.netflix.discovery.DiscoveryClient    : Initializing Eureka in region us-east-1
-2019-07-08 01:23:34.760  INFO 14496 --- [main] c.n.d.provider.DiscoveryJerseyProvider   : Using JSON encoding codec LegacyJacksonJson
-2019-07-08 01:23:34.770  INFO 14496 --- [main] c.n.d.provider.DiscoveryJerseyProvider   : Using JSON decoding codec LegacyJacksonJson
-2019-07-08 01:23:34.916  INFO 14496 --- [main] c.n.d.provider.DiscoveryJerseyProvider   : Using XML encoding codec XStreamXml
-2019-07-08 01:23:34.916  INFO 14496 --- [main] c.n.d.provider.DiscoveryJerseyProvider   : Using XML decoding codec XStreamXml
-2019-07-08 01:23:35.292  INFO 14496 --- [main] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
-2019-07-08 01:23:35.317  INFO 14496 --- [RMI TCP Connection(3)-127.0.0.1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2019-07-08 01:23:35.736  INFO 14496 --- [main] com.netflix.discovery.DiscoveryClient    : Disable delta property : false
-2019-07-08 01:23:35.736  INFO 14496 --- [main] com.netflix.discovery.DiscoveryClient    : Single vip registry refresh property : null
-2019-07-08 01:23:35.743  INFO 14496 --- [main] com.netflix.discovery.DiscoveryClient    : Force full registry fetch : false
-2019-07-08 01:23:35.743  INFO 14496 --- [main] com.netflix.discovery.DiscoveryClient    : Application is null : false
-2019-07-08 01:23:35.748  INFO 14496 --- [main] com.netflix.discovery.DiscoveryClient    : Registered Applications size is zero : true
-2019-07-08 01:23:35.749  INFO 14496 --- [main] com.netflix.discovery.DiscoveryClient    : Application version is -1: true
-2019-07-08 01:23:35.749  INFO 14496 --- [main] com.netflix.discovery.DiscoveryClient    : Getting all instance registry info from the eureka server
-2019-07-08 01:23:35.965  INFO 14496 --- [main] com.netflix.discovery.DiscoveryClient    : The response status is 200
-2019-07-08 01:23:35.973  INFO 14496 --- [main] com.netflix.discovery.DiscoveryClient    : Starting heartbeat executor: renew interval is: 30
-2019-07-08 01:23:35.976  INFO 14496 --- [main] c.n.discovery.InstanceInfoReplicator     : InstanceInfoReplicator onDemand update allowed rate per min is 4
-2019-07-08 01:23:35.980  INFO 14496 --- [main] com.netflix.discovery.DiscoveryClient    : Discovery Client initialized at timestamp 1562516615979 with initial instances count: 0
-2019-07-08 01:23:35.983  INFO 14496 --- [main] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1562516615982, current=UP, previous=STARTING]
-2019-07-08 01:23:35.991  INFO 14496 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_CONCEPT/DEVELOP:concept:8085: registering service...
-2019-07-08 01:23:36.064  INFO 14496 --- [main] c.t.bnk.MsaSa02BnkSvcConceptApplication  : Started MsaSa02BnkSvcConceptApplication in 10.183 seconds (JVM running for 11.336)
-2019-07-08 01:23:36.113  INFO 14496 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_CONCEPT/DEVELOP:concept:8085 - registration status: 204
-2019-07-08 01:24:05.974  INFO 14496 --- [DiscoveryClient-CacheRefreshExecutor-0] com.netflix.discovery.DiscoveryClient    : Disable delta property : false
-2019-07-08 01:24:05.980  INFO 14496 --- [DiscoveryClient-CacheRefreshExecutor-0] com.netflix.discovery.DiscoveryClient    : Single vip registry refresh property : null
-2019-07-08 01:24:05.981  INFO 14496 --- [DiscoveryClient-CacheRefreshExecutor-0] com.netflix.discovery.DiscoveryClient    : Force full registry fetch : false
-2019-07-08 01:24:05.981  INFO 14496 --- [DiscoveryClient-CacheRefreshExecutor-0] com.netflix.discovery.DiscoveryClient    : Application is null : false
-2019-07-08 01:24:05.981  INFO 14496 --- [DiscoveryClient-CacheRefreshExecutor-0] com.netflix.discovery.DiscoveryClient    : Registered Applications size is zero : true
-2019-07-08 01:24:05.981  INFO 14496 --- [DiscoveryClient-CacheRefreshExecutor-0] com.netflix.discovery.DiscoveryClient    : Application version is -1: false
-2019-07-08 01:24:05.981  INFO 14496 --- [DiscoveryClient-CacheRefreshExecutor-0] com.netflix.discovery.DiscoveryClient    : Getting all instance registry info from the eureka server
-2019-07-08 01:24:06.010  INFO 14496 --- [DiscoveryClient-CacheRefreshExecutor-0] com.netflix.discovery.DiscoveryClient    : The response status is 200
-2019-07-08 01:28:35.751  INFO 14496 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
-2019-07-08 01:31:58.333  WARN 14496 --- [RMI TCP Connection(19)-127.0.0.1] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1562517118333, current=DOWN, previous=UP]
-2019-07-08 01:31:58.341  INFO 14496 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_CONCEPT/DEVELOP:concept:8085: registering service...
-2019-07-08 01:31:58.350  INFO 14496 --- [RMI TCP Connection(19)-127.0.0.1] com.netflix.discovery.DiscoveryClient    : Shutting down DiscoveryClient ...
-2019-07-08 01:31:58.352  INFO 14496 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_CONCEPT/DEVELOP:concept:8085 - registration status: 204
-2019-07-08 01:31:58.360  INFO 14496 --- [RMI TCP Connection(19)-127.0.0.1] com.netflix.discovery.DiscoveryClient    : Unregistering ...
-2019-07-08 01:31:58.364  INFO 14496 --- [RMI TCP Connection(19)-127.0.0.1] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_CONCEPT/DEVELOP:concept:8085 - deregister  status: 200
-2019-07-08 01:31:58.371  INFO 14496 --- [RMI TCP Connection(19)-127.0.0.1] com.netflix.discovery.DiscoveryClient    : Completed shut down of DiscoveryClient
-2019-07-08 01:31:58.686  INFO 14496 --- [RMI TCP Connection(19)-127.0.0.1] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
-2019-07-08 01:31:58.695  INFO 14496 --- [RMI TCP Connection(19)-127.0.0.1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Destroying Spring FrameworkServlet 'dispatcherServlet'
-2019-07-08 03:03:21.233  INFO 7892 --- [main] c.t.bnk.MsaSa02BnkSvcConceptApplication  : The following profiles are active: default
-2019-07-08 03:03:22.807  INFO 7892 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2019-07-08 03:03:22.813  INFO 7892 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.21]
-2019-07-08 03:03:22.964  INFO 7892 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2019-07-08 03:03:23.131  WARN 7892 --- [main] c.n.c.sources.URLConfigurationSource     : No URLs will be polled as dynamic configuration sources.
-2019-07-08 03:03:23.131  INFO 7892 --- [main] c.n.c.sources.URLConfigurationSource     : To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
-2019-07-08 03:03:23.143  INFO 7892 --- [main] c.netflix.config.DynamicPropertyFactory  : DynamicPropertyFactory is initialized with configuration sources: com.netflix.config.ConcurrentCompositeConfiguration@15efda6c
-2019-07-08 03:03:24.606  WARN 7892 --- [main] c.n.c.sources.URLConfigurationSource     : No URLs will be polled as dynamic configuration sources.
-2019-07-08 03:03:24.614  INFO 7892 --- [main] c.n.c.sources.URLConfigurationSource     : To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
-2019-07-08 03:03:26.174  INFO 7892 --- [main] com.netflix.discovery.DiscoveryClient    : Initializing Eureka in region us-east-1
-2019-07-08 03:03:26.296  INFO 7892 --- [main] c.n.d.provider.DiscoveryJerseyProvider   : Using JSON encoding codec LegacyJacksonJson
-2019-07-08 03:03:26.302  INFO 7892 --- [main] c.n.d.provider.DiscoveryJerseyProvider   : Using JSON decoding codec LegacyJacksonJson
-2019-07-08 03:03:26.431  INFO 7892 --- [main] c.n.d.provider.DiscoveryJerseyProvider   : Using XML encoding codec XStreamXml
-2019-07-08 03:03:26.431  INFO 7892 --- [main] c.n.d.provider.DiscoveryJerseyProvider   : Using XML decoding codec XStreamXml
-2019-07-08 03:03:26.639  INFO 7892 --- [main] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
-2019-07-08 03:03:27.031  INFO 7892 --- [main] com.netflix.discovery.DiscoveryClient    : Disable delta property : false
-2019-07-08 03:03:27.037  INFO 7892 --- [main] com.netflix.discovery.DiscoveryClient    : Single vip registry refresh property : null
-2019-07-08 03:03:27.037  INFO 7892 --- [main] com.netflix.discovery.DiscoveryClient    : Force full registry fetch : false
-2019-07-08 03:03:27.042  INFO 7892 --- [main] com.netflix.discovery.DiscoveryClient    : Application is null : false
-2019-07-08 03:03:27.043  INFO 7892 --- [main] com.netflix.discovery.DiscoveryClient    : Registered Applications size is zero : true
-2019-07-08 03:03:27.049  INFO 7892 --- [main] com.netflix.discovery.DiscoveryClient    : Application version is -1: true
-2019-07-08 03:03:27.049  INFO 7892 --- [main] com.netflix.discovery.DiscoveryClient    : Getting all instance registry info from the eureka server
-2019-07-08 03:03:27.178  INFO 7892 --- [main] com.netflix.discovery.DiscoveryClient    : The response status is 200
-2019-07-08 03:03:27.181  INFO 7892 --- [main] com.netflix.discovery.DiscoveryClient    : Starting heartbeat executor: renew interval is: 30
-2019-07-08 03:03:27.190  INFO 7892 --- [main] c.n.discovery.InstanceInfoReplicator     : InstanceInfoReplicator onDemand update allowed rate per min is 4
-2019-07-08 03:03:27.195  INFO 7892 --- [main] com.netflix.discovery.DiscoveryClient    : Discovery Client initialized at timestamp 1562522607194 with initial instances count: 0
-2019-07-08 03:03:27.198  INFO 7892 --- [main] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1562522607198, current=UP, previous=STARTING]
-2019-07-08 03:03:27.201  INFO 7892 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_CONCEPT/DEVELOP:concept:8085: registering service...
-2019-07-08 03:03:27.239  INFO 7892 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_CONCEPT/DEVELOP:concept:8085 - registration status: 204
-2019-07-08 03:03:27.259  INFO 7892 --- [main] c.t.bnk.MsaSa02BnkSvcConceptApplication  : Started MsaSa02BnkSvcConceptApplication in 9.363 seconds (JVM running for 10.445)
-2019-07-08 03:03:28.390  INFO 7892 --- [RMI TCP Connection(1)-127.0.0.1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2019-07-08 03:03:57.182  INFO 7892 --- [DiscoveryClient-CacheRefreshExecutor-0] com.netflix.discovery.DiscoveryClient    : Disable delta property : false
-2019-07-08 03:03:57.188  INFO 7892 --- [DiscoveryClient-CacheRefreshExecutor-0] com.netflix.discovery.DiscoveryClient    : Single vip registry refresh property : null
-2019-07-08 03:03:57.188  INFO 7892 --- [DiscoveryClient-CacheRefreshExecutor-0] com.netflix.discovery.DiscoveryClient    : Force full registry fetch : false
-2019-07-08 03:03:57.193  INFO 7892 --- [DiscoveryClient-CacheRefreshExecutor-0] com.netflix.discovery.DiscoveryClient    : Application is null : false
-2019-07-08 03:03:57.194  INFO 7892 --- [DiscoveryClient-CacheRefreshExecutor-0] com.netflix.discovery.DiscoveryClient    : Registered Applications size is zero : true
-2019-07-08 03:03:57.199  INFO 7892 --- [DiscoveryClient-CacheRefreshExecutor-0] com.netflix.discovery.DiscoveryClient    : Application version is -1: false
-2019-07-08 03:03:57.199  INFO 7892 --- [DiscoveryClient-CacheRefreshExecutor-0] com.netflix.discovery.DiscoveryClient    : Getting all instance registry info from the eureka server
-2019-07-08 03:03:57.231  INFO 7892 --- [DiscoveryClient-CacheRefreshExecutor-0] com.netflix.discovery.DiscoveryClient    : The response status is 200
-2019-07-08 03:08:27.052  INFO 7892 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
-2019-07-08 03:09:05.113  WARN 7892 --- [RMI TCP Connection(15)-127.0.0.1] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1562522945113, current=DOWN, previous=UP]
-2019-07-08 03:09:05.114  INFO 7892 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_CONCEPT/DEVELOP:concept:8085: registering service...
-2019-07-08 03:09:05.123  INFO 7892 --- [RMI TCP Connection(15)-127.0.0.1] com.netflix.discovery.DiscoveryClient    : Shutting down DiscoveryClient ...
-2019-07-08 03:09:05.126  INFO 7892 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_CONCEPT/DEVELOP:concept:8085 - registration status: 204
-2019-07-08 03:09:05.132  INFO 7892 --- [RMI TCP Connection(15)-127.0.0.1] com.netflix.discovery.DiscoveryClient    : Unregistering ...
-2019-07-08 03:09:05.139  INFO 7892 --- [RMI TCP Connection(15)-127.0.0.1] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_CONCEPT/DEVELOP:concept:8085 - deregister  status: 200
-2019-07-08 03:09:05.146  INFO 7892 --- [RMI TCP Connection(15)-127.0.0.1] com.netflix.discovery.DiscoveryClient    : Completed shut down of DiscoveryClient
-2019-07-08 03:09:05.486  INFO 7892 --- [RMI TCP Connection(15)-127.0.0.1] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
-2019-07-08 03:09:05.495  INFO 7892 --- [RMI TCP Connection(15)-127.0.0.1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Destroying Spring FrameworkServlet 'dispatcherServlet'
+2019-07-09 10:17:43.720  INFO 18280 --- [main] c.t.bnk.MsaSa02BnkSvcConceptApplication  : The following profiles are active: default
+2019-07-09 10:17:47.083  INFO 18280 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2019-07-09 10:17:47.084  INFO 18280 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.21]
+2019-07-09 10:17:47.588  INFO 18280 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2019-07-09 10:17:47.832  WARN 18280 --- [main] c.n.c.sources.URLConfigurationSource     : No URLs will be polled as dynamic configuration sources.
+2019-07-09 10:17:47.834  INFO 18280 --- [main] c.n.c.sources.URLConfigurationSource     : To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2019-07-09 10:17:47.861  INFO 18280 --- [main] c.netflix.config.DynamicPropertyFactory  : DynamicPropertyFactory is initialized with configuration sources: com.netflix.config.ConcurrentCompositeConfiguration@6f798482
+2019-07-09 10:17:52.462  WARN 18280 --- [main] c.n.c.sources.URLConfigurationSource     : No URLs will be polled as dynamic configuration sources.
+2019-07-09 10:17:52.463  INFO 18280 --- [main] c.n.c.sources.URLConfigurationSource     : To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2019-07-09 10:17:57.303  INFO 18280 --- [main] com.netflix.discovery.DiscoveryClient    : Initializing Eureka in region us-east-1
+2019-07-09 10:17:57.530  INFO 18280 --- [main] c.n.d.provider.DiscoveryJerseyProvider   : Using JSON encoding codec LegacyJacksonJson
+2019-07-09 10:17:57.531  INFO 18280 --- [main] c.n.d.provider.DiscoveryJerseyProvider   : Using JSON decoding codec LegacyJacksonJson
+2019-07-09 10:17:57.842  INFO 18280 --- [main] c.n.d.provider.DiscoveryJerseyProvider   : Using XML encoding codec XStreamXml
+2019-07-09 10:17:57.843  INFO 18280 --- [main] c.n.d.provider.DiscoveryJerseyProvider   : Using XML decoding codec XStreamXml
+2019-07-09 10:17:58.464  INFO 18280 --- [main] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2019-07-09 10:17:59.601  INFO 18280 --- [main] com.netflix.discovery.DiscoveryClient    : Disable delta property : false
+2019-07-09 10:17:59.603  INFO 18280 --- [main] com.netflix.discovery.DiscoveryClient    : Single vip registry refresh property : null
+2019-07-09 10:17:59.604  INFO 18280 --- [main] com.netflix.discovery.DiscoveryClient    : Force full registry fetch : false
+2019-07-09 10:17:59.604  INFO 18280 --- [main] com.netflix.discovery.DiscoveryClient    : Application is null : false
+2019-07-09 10:17:59.605  INFO 18280 --- [main] com.netflix.discovery.DiscoveryClient    : Registered Applications size is zero : true
+2019-07-09 10:17:59.606  INFO 18280 --- [main] com.netflix.discovery.DiscoveryClient    : Application version is -1: true
+2019-07-09 10:17:59.607  INFO 18280 --- [main] com.netflix.discovery.DiscoveryClient    : Getting all instance registry info from the eureka server
+2019-07-09 10:17:59.955  INFO 18280 --- [main] com.netflix.discovery.DiscoveryClient    : The response status is 200
+2019-07-09 10:17:59.960  INFO 18280 --- [main] com.netflix.discovery.DiscoveryClient    : Starting heartbeat executor: renew interval is: 30
+2019-07-09 10:17:59.965  INFO 18280 --- [main] c.n.discovery.InstanceInfoReplicator     : InstanceInfoReplicator onDemand update allowed rate per min is 4
+2019-07-09 10:17:59.973  INFO 18280 --- [main] com.netflix.discovery.DiscoveryClient    : Discovery Client initialized at timestamp 1562635079972 with initial instances count: 3
+2019-07-09 10:17:59.978  INFO 18280 --- [main] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1562635079978, current=UP, previous=STARTING]
+2019-07-09 10:17:59.983  INFO 18280 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_CONCEPT/localhost:concept:8085: registering service...
+2019-07-09 10:18:00.143  INFO 18280 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_CONCEPT/localhost:concept:8085 - registration status: 204
+2019-07-09 10:18:00.175  INFO 18280 --- [main] c.t.bnk.MsaSa02BnkSvcConceptApplication  : Started MsaSa02BnkSvcConceptApplication in 27.123 seconds (JVM running for 29.839)
+2019-07-09 10:19:08.742  WARN 18280 --- [RMI TCP Connection(9)-127.0.0.1] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1562635148742, current=DOWN, previous=UP]
+2019-07-09 10:19:08.743  INFO 18280 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_CONCEPT/localhost:concept:8085: registering service...
+2019-07-09 10:19:08.758  INFO 18280 --- [RMI TCP Connection(9)-127.0.0.1] com.netflix.discovery.DiscoveryClient    : Shutting down DiscoveryClient ...
+2019-07-09 10:19:08.773  INFO 18280 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_CONCEPT/localhost:concept:8085 - registration status: 204
+2019-07-09 10:19:08.775  INFO 18280 --- [RMI TCP Connection(9)-127.0.0.1] com.netflix.discovery.DiscoveryClient    : Unregistering ...
+2019-07-09 10:19:08.795  INFO 18280 --- [RMI TCP Connection(9)-127.0.0.1] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_CONCEPT/localhost:concept:8085 - deregister  status: 200
+2019-07-09 10:19:08.808  INFO 18280 --- [RMI TCP Connection(9)-127.0.0.1] com.netflix.discovery.DiscoveryClient    : Completed shut down of DiscoveryClient
+2019-07-09 10:19:09.622  INFO 18280 --- [RMI TCP Connection(9)-127.0.0.1] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2019-07-09 10:21:00.120  INFO 18904 --- [main] c.t.bnk.MsaSa02BnkSvcConceptApplication  : The following profiles are active: default
+2019-07-09 10:21:03.362  INFO 18904 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2019-07-09 10:21:03.364  INFO 18904 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.21]
+2019-07-09 10:21:03.908  INFO 18904 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2019-07-09 10:21:04.137  WARN 18904 --- [main] c.n.c.sources.URLConfigurationSource     : No URLs will be polled as dynamic configuration sources.
+2019-07-09 10:21:04.138  INFO 18904 --- [main] c.n.c.sources.URLConfigurationSource     : To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2019-07-09 10:21:04.162  INFO 18904 --- [main] c.netflix.config.DynamicPropertyFactory  : DynamicPropertyFactory is initialized with configuration sources: com.netflix.config.ConcurrentCompositeConfiguration@6e4599c0
+2019-07-09 10:21:07.968  WARN 18904 --- [main] c.n.c.sources.URLConfigurationSource     : No URLs will be polled as dynamic configuration sources.
+2019-07-09 10:21:07.969  INFO 18904 --- [main] c.n.c.sources.URLConfigurationSource     : To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2019-07-09 10:21:12.313  INFO 18904 --- [main] com.netflix.discovery.DiscoveryClient    : Initializing Eureka in region us-east-1
+2019-07-09 10:21:12.526  INFO 18904 --- [main] c.n.d.provider.DiscoveryJerseyProvider   : Using JSON encoding codec LegacyJacksonJson
+2019-07-09 10:21:12.527  INFO 18904 --- [main] c.n.d.provider.DiscoveryJerseyProvider   : Using JSON decoding codec LegacyJacksonJson
+2019-07-09 10:21:12.845  INFO 18904 --- [main] c.n.d.provider.DiscoveryJerseyProvider   : Using XML encoding codec XStreamXml
+2019-07-09 10:21:12.846  INFO 18904 --- [main] c.n.d.provider.DiscoveryJerseyProvider   : Using XML decoding codec XStreamXml
+2019-07-09 10:21:13.358  INFO 18904 --- [main] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2019-07-09 10:21:14.599  INFO 18904 --- [main] com.netflix.discovery.DiscoveryClient    : Disable delta property : false
+2019-07-09 10:21:14.600  INFO 18904 --- [main] com.netflix.discovery.DiscoveryClient    : Single vip registry refresh property : null
+2019-07-09 10:21:14.601  INFO 18904 --- [main] com.netflix.discovery.DiscoveryClient    : Force full registry fetch : false
+2019-07-09 10:21:14.602  INFO 18904 --- [main] com.netflix.discovery.DiscoveryClient    : Application is null : false
+2019-07-09 10:21:14.603  INFO 18904 --- [main] com.netflix.discovery.DiscoveryClient    : Registered Applications size is zero : true
+2019-07-09 10:21:14.604  INFO 18904 --- [main] com.netflix.discovery.DiscoveryClient    : Application version is -1: true
+2019-07-09 10:21:14.604  INFO 18904 --- [main] com.netflix.discovery.DiscoveryClient    : Getting all instance registry info from the eureka server
+2019-07-09 10:21:14.987  INFO 18904 --- [main] com.netflix.discovery.DiscoveryClient    : The response status is 200
+2019-07-09 10:21:14.994  INFO 18904 --- [main] com.netflix.discovery.DiscoveryClient    : Starting heartbeat executor: renew interval is: 30
+2019-07-09 10:21:15.000  INFO 18904 --- [main] c.n.discovery.InstanceInfoReplicator     : InstanceInfoReplicator onDemand update allowed rate per min is 4
+2019-07-09 10:21:15.008  INFO 18904 --- [main] com.netflix.discovery.DiscoveryClient    : Discovery Client initialized at timestamp 1562635275006 with initial instances count: 2
+2019-07-09 10:21:15.012  INFO 18904 --- [main] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1562635275012, current=UP, previous=STARTING]
+2019-07-09 10:21:15.018  INFO 18904 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_CONCEPT/localhost:concept:8085: registering service...
+2019-07-09 10:21:15.143  INFO 18904 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_CONCEPT/localhost:concept:8085 - registration status: 204
+2019-07-09 10:21:15.168  INFO 18904 --- [main] c.t.bnk.MsaSa02BnkSvcConceptApplication  : Started MsaSa02BnkSvcConceptApplication in 27.301 seconds (JVM running for 30.306)
+2019-07-09 10:26:14.608  INFO 18904 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2019-07-09 10:31:14.611  INFO 18904 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2019-07-09 10:32:51.483  WARN 18904 --- [RMI TCP Connection(24)-127.0.0.1] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1562635971483, current=DOWN, previous=UP]
+2019-07-09 10:32:51.484  INFO 18904 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_CONCEPT/localhost:concept:8085: registering service...
+2019-07-09 10:32:51.498  INFO 18904 --- [RMI TCP Connection(24)-127.0.0.1] com.netflix.discovery.DiscoveryClient    : Shutting down DiscoveryClient ...
+2019-07-09 10:32:51.513  INFO 18904 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_CONCEPT/localhost:concept:8085 - registration status: 204
+2019-07-09 10:32:51.515  INFO 18904 --- [RMI TCP Connection(24)-127.0.0.1] com.netflix.discovery.DiscoveryClient    : Unregistering ...
+2019-07-09 10:32:51.532  INFO 18904 --- [RMI TCP Connection(24)-127.0.0.1] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_CONCEPT/localhost:concept:8085 - deregister  status: 200
+2019-07-09 10:32:51.544  INFO 18904 --- [RMI TCP Connection(24)-127.0.0.1] com.netflix.discovery.DiscoveryClient    : Completed shut down of DiscoveryClient
+2019-07-09 10:32:52.419  INFO 18904 --- [RMI TCP Connection(24)-127.0.0.1] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2019-07-09 10:35:16.384  INFO 7084 --- [main] c.t.bnk.MsaSa02BnkSvcConceptApplication  : The following profiles are active: default
+2019-07-09 10:35:19.579  INFO 7084 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2019-07-09 10:35:19.580  INFO 7084 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.21]
+2019-07-09 10:35:20.124  INFO 7084 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2019-07-09 10:35:20.329  WARN 7084 --- [main] c.n.c.sources.URLConfigurationSource     : No URLs will be polled as dynamic configuration sources.
+2019-07-09 10:35:20.329  INFO 7084 --- [main] c.n.c.sources.URLConfigurationSource     : To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2019-07-09 10:35:20.356  INFO 7084 --- [main] c.netflix.config.DynamicPropertyFactory  : DynamicPropertyFactory is initialized with configuration sources: com.netflix.config.ConcurrentCompositeConfiguration@e11ecfa
+2019-07-09 10:35:24.301  WARN 7084 --- [main] c.n.c.sources.URLConfigurationSource     : No URLs will be polled as dynamic configuration sources.
+2019-07-09 10:35:24.302  INFO 7084 --- [main] c.n.c.sources.URLConfigurationSource     : To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2019-07-09 10:35:28.309  INFO 7084 --- [main] com.netflix.discovery.DiscoveryClient    : Initializing Eureka in region us-east-1
+2019-07-09 10:35:28.532  INFO 7084 --- [main] c.n.d.provider.DiscoveryJerseyProvider   : Using JSON encoding codec LegacyJacksonJson
+2019-07-09 10:35:28.533  INFO 7084 --- [main] c.n.d.provider.DiscoveryJerseyProvider   : Using JSON decoding codec LegacyJacksonJson
+2019-07-09 10:35:28.791  INFO 7084 --- [main] c.n.d.provider.DiscoveryJerseyProvider   : Using XML encoding codec XStreamXml
+2019-07-09 10:35:28.791  INFO 7084 --- [main] c.n.d.provider.DiscoveryJerseyProvider   : Using XML decoding codec XStreamXml
+2019-07-09 10:35:29.190  INFO 7084 --- [main] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2019-07-09 10:35:30.410  INFO 7084 --- [main] com.netflix.discovery.DiscoveryClient    : Disable delta property : false
+2019-07-09 10:35:30.411  INFO 7084 --- [main] com.netflix.discovery.DiscoveryClient    : Single vip registry refresh property : null
+2019-07-09 10:35:30.411  INFO 7084 --- [main] com.netflix.discovery.DiscoveryClient    : Force full registry fetch : false
+2019-07-09 10:35:30.412  INFO 7084 --- [main] com.netflix.discovery.DiscoveryClient    : Application is null : false
+2019-07-09 10:35:30.412  INFO 7084 --- [main] com.netflix.discovery.DiscoveryClient    : Registered Applications size is zero : true
+2019-07-09 10:35:30.413  INFO 7084 --- [main] com.netflix.discovery.DiscoveryClient    : Application version is -1: true
+2019-07-09 10:35:30.413  INFO 7084 --- [main] com.netflix.discovery.DiscoveryClient    : Getting all instance registry info from the eureka server
+2019-07-09 10:35:30.821  INFO 7084 --- [main] com.netflix.discovery.DiscoveryClient    : The response status is 200
+2019-07-09 10:35:30.828  INFO 7084 --- [main] com.netflix.discovery.DiscoveryClient    : Starting heartbeat executor: renew interval is: 30
+2019-07-09 10:35:30.834  INFO 7084 --- [main] c.n.discovery.InstanceInfoReplicator     : InstanceInfoReplicator onDemand update allowed rate per min is 4
+2019-07-09 10:35:30.842  INFO 7084 --- [main] com.netflix.discovery.DiscoveryClient    : Discovery Client initialized at timestamp 1562636130840 with initial instances count: 2
+2019-07-09 10:35:30.846  INFO 7084 --- [main] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1562636130846, current=UP, previous=STARTING]
+2019-07-09 10:35:30.851  INFO 7084 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_CONCEPT/localhost:concept:8085: registering service...
+2019-07-09 10:35:30.959  INFO 7084 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_CONCEPT/localhost:concept:8085 - registration status: 204
+2019-07-09 10:35:30.966  INFO 7084 --- [main] c.t.bnk.MsaSa02BnkSvcConceptApplication  : Started MsaSa02BnkSvcConceptApplication in 26.771 seconds (JVM running for 30.548)
+2019-07-09 10:40:30.420  INFO 7084 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2019-07-09 10:45:30.423  INFO 7084 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2019-07-09 10:50:30.426  INFO 7084 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2019-07-09 10:55:10.062  INFO 7084 --- [http-nio-8085-exec-3] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2019-07-09 10:55:10.102  INFO 7084 --- [http-nio-8085-exec-3] com.tyn.bnk.utils.UserContextFilter      : Harang.UserContextFilter Correlation id: null
+2019-07-09 10:55:10.203  INFO 7084 --- [http-nio-8085-exec-3] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2019-07-09 10:55:10.495  INFO 7084 --- [http-nio-8085-exec-3] com.zaxxer.hikari.pool.PoolBase          : HikariPool-1 - Driver does not support get/set network timeout for connections. (oracle.jdbc.driver.T4CConnection.getNetworkTimeout()I)
+2019-07-09 10:55:10.510  INFO 7084 --- [http-nio-8085-exec-3] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2019-07-09 10:55:30.429  INFO 7084 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2019-07-09 10:55:46.681  INFO 7084 --- [http-nio-8085-exec-2] com.tyn.bnk.utils.UserContextFilter      : Harang.UserContextFilter Correlation id: null
+2019-07-09 10:55:50.698  INFO 7084 --- [http-nio-8085-exec-1] com.tyn.bnk.utils.UserContextFilter      : Harang.UserContextFilter Correlation id: null
+2019-07-09 11:00:30.431  INFO 7084 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2019-07-09 11:05:30.434  INFO 7084 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2019-07-09 11:10:30.436  INFO 7084 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2019-07-09 11:15:30.438  INFO 7084 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2019-07-09 11:16:39.095  INFO 7084 --- [http-nio-8085-exec-6] com.tyn.bnk.utils.UserContextFilter      : Harang.UserContextFilter Correlation id: test-correlation-id
+2019-07-09 11:17:55.910  INFO 7084 --- [http-nio-8085-exec-9] com.tyn.bnk.utils.UserContextFilter      : Harang.UserContextFilter Correlation id: null
+2019-07-09 11:20:30.442  INFO 7084 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2019-07-09 11:25:30.444  INFO 7084 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2019-07-09 11:30:30.447  INFO 7084 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2019-07-09 11:35:30.450  INFO 7084 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2019-07-09 11:40:30.452  INFO 7084 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2019-07-09 11:45:30.454  INFO 7084 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2019-07-09 11:50:30.456  INFO 7084 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2019-07-09 11:55:30.458  INFO 7084 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2019-07-09 12:00:30.460  INFO 7084 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2019-07-09 12:05:30.461  INFO 7084 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2019-07-09 12:10:30.463  INFO 7084 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2019-07-09 12:15:30.465  INFO 7084 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2019-07-09 12:20:30.466  INFO 7084 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2019-07-09 12:25:30.469  INFO 7084 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2019-07-09 12:30:30.471  INFO 7084 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2019-07-09 12:35:30.474  INFO 7084 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2019-07-09 12:40:30.477  INFO 7084 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2019-07-09 12:45:30.478  INFO 7084 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2019-07-09 12:50:30.479  INFO 7084 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2019-07-09 12:55:30.482  INFO 7084 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2019-07-09 13:00:30.484  INFO 7084 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2019-07-09 13:05:30.488  INFO 7084 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2019-07-09 13:10:30.490  INFO 7084 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2019-07-09 13:15:30.492  INFO 7084 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2019-07-09 13:20:30.495  INFO 7084 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2019-07-09 13:25:30.498  INFO 7084 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2019-07-09 13:30:30.500  INFO 7084 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2019-07-09 13:35:30.503  INFO 7084 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2019-07-09 13:40:04.244  WARN 7084 --- [RMI TCP Connection(460)-127.0.0.1] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1562647204244, current=DOWN, previous=UP]
+2019-07-09 13:40:04.246  INFO 7084 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_CONCEPT/localhost:concept:8085: registering service...
+2019-07-09 13:40:04.287  INFO 7084 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_CONCEPT/localhost:concept:8085 - registration status: 204
+2019-07-09 13:40:04.297  INFO 7084 --- [RMI TCP Connection(460)-127.0.0.1] com.netflix.discovery.DiscoveryClient    : Shutting down DiscoveryClient ...
+2019-07-09 13:40:07.301  INFO 7084 --- [RMI TCP Connection(460)-127.0.0.1] com.netflix.discovery.DiscoveryClient    : Unregistering ...
+2019-07-09 13:40:07.332  INFO 7084 --- [RMI TCP Connection(460)-127.0.0.1] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_CONCEPT/localhost:concept:8085 - deregister  status: 200
+2019-07-09 13:40:07.344  INFO 7084 --- [RMI TCP Connection(460)-127.0.0.1] com.netflix.discovery.DiscoveryClient    : Completed shut down of DiscoveryClient
+2019-07-09 13:40:07.345  INFO 7084 --- [RMI TCP Connection(460)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2019-07-09 13:40:07.366  INFO 7084 --- [RMI TCP Connection(460)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2019-07-09 13:40:08.289  INFO 7084 --- [RMI TCP Connection(460)-127.0.0.1] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2019-07-09 13:40:08.299  INFO 7084 --- [RMI TCP Connection(460)-127.0.0.1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Destroying Spring FrameworkServlet 'dispatcherServlet'

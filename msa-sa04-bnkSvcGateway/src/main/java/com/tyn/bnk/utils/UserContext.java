@@ -9,12 +9,12 @@ public class UserContext {
     public static final String CORRELATION_ID = "tmx-correlation-id";
     public static final String AUTH_TOKEN     = "tmx-auth-token";
     public static final String USER_ID        = "tmx-user-id";
-    public static final String ORG_ID         = "tmx-org-id";
+    public static final String EMP_NO         = "tmx-emp-no";
 
     private String correlationId= new String();
     private String authToken= new String();
     private String userId = new String();
-    private String orgId = new String();
+    private String empNo = new String();
 
     public String getCorrelationId() { return correlationId;}
     public void setCorrelationId(String correlationId) {
@@ -37,12 +37,12 @@ public class UserContext {
         this.userId = userId;
     }
 
-    public String getOrgId() {
-        return orgId;
+    public String getEmpNo() {
+        return empNo;
     }
 
-    public void setOrgId(String orgId) {
-        this.orgId = orgId;
+    public void setEmpNo(String empNo) {
+        this.empNo = empNo;
     }
 
 }

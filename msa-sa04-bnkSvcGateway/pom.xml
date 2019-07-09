@@ -11,7 +11,7 @@
 	<groupId>com.tyn.bnk</groupId>
 	<artifactId>msa-sa04-bnkSvcGateway</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>Zuul Proxy Server</name>
+	<name>zuulSvcGateway</name>
 	<description>Zuul Service Gateway</description>
 
 	<properties>
