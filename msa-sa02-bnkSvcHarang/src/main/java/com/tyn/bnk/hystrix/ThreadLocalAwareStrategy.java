@@ -12,7 +12,7 @@ import com.netflix.hystrix.strategy.concurrency.HystrixRequestVariableLifecycle;
 import com.netflix.hystrix.strategy.properties.HystrixProperty;
 import com.tyn.bnk.utils.UserContextHolder;
 
-//히스트릭스 병행성 전략 클래스의 사용자 정의 클래스
+//히스트릭스 병행성 전략 클래스의 사용자 정의 클래스  -목적> 히스트릭스 기본 설정을 재정의해 공통 HTTP헤더의 정보를 받아오기 위함
 public class ThreadLocalAwareStrategy extends HystrixConcurrencyStrategy{
 //HystrixConcurrencyStrategy 상속 : [목적] 해당 클래스를 정의하는 클래스를 만드는 것
 	

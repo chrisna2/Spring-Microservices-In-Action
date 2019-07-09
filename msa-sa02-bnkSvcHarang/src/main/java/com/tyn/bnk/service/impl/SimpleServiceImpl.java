@@ -32,6 +32,7 @@ import com.tyn.bnk.utils.UserContextHolder;
 					@HystrixProperty(name = "maxQueueSize", value = "10")
 			}
 			/*
+			 //현재 "execution.isolation.thread.timeoutInMiliseconds" 클래스가 존재 하지 않는다는 에러가 발생해서 일단 주석으로 처리
 			,commandProperties = {
 					//회로차단기의 타임아웃 시간(밀리초)을 설정하는 데 사용되는 timeoutInMilisecond 프로퍼티, 호출이 실패하기 전까지 대기할 최대 타임아웃 시간을 10초로 설정
 					@HystrixProperty(name = "execution.isolation.thread.timeoutInMiliseconds", value = "10000")
@@ -101,6 +102,7 @@ public class SimpleServiceImpl implements SimpleService {
 		return result;
 	}
 	
+	//일부러 에러를 발생시키려고 만든 임시 메소드
 	public void ramdomlyRunning() {
 		Random rand = new Random();
 		int randomNum = rand.nextInt((3-1)+1)+1;
@@ -110,10 +112,9 @@ public class SimpleServiceImpl implements SimpleService {
 		}
 		
 	}
-	
 	public void sleep() {
 		try {
-			//11초 동안 대기함 : 히스트릭스는 기번 적으로 1초 후에 호출을 타입아웃 한다.
+			//11초 동안 대기함 : 히스트릭스는 기본적으로 1초 후에 호출을 타입아웃 한다.
 			Thread.sleep(11000);
 		} catch (Exception e) {
 			e.printStackTrace();

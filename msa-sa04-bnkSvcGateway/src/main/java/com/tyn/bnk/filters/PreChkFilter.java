@@ -25,7 +25,7 @@ public class PreChkFilter extends ZuulFilter{
 	@Override
 	public String filterType() {
 		// 주울에서 사전(pre)-경로(route)-사후(post) 필터를 지정하는데 사용된다.
-		return filterUtils.PRE_FILTER_TYPE;//"pre" : 사전 필터임을 나타내는 키워드
+		return FilterUtils.PRE_FILTER_TYPE;//"pre" : 사전 필터임을 나타내는 키워드
 	}
 	
 	@Override
@@ -39,19 +39,6 @@ public class PreChkFilter extends ZuulFilter{
 		// 필터의 활성화 여부를 나타내는 boolean 값을 반환한다.
 		return SHOULD_FILTER;
 	}
-	
-	//Correlation_Id 가 존재 하는지 여부를 확인하는 메서드
-	private boolean isCorrelationIdPresent() {
-		if(filterUtils.getCorrelationId() != null) {
-			return true;
-		}
-		return false;
-	}
-	
-    private String generateCorrelationId(){
-    	//실제로 tmx-correlation-id존재 여부를 확인하고, 없으면 상관관계ID의 GUID 값을 랜덤으로 생성하는 메서드
-        return java.util.UUID.randomUUID().toString();
-    }
 	
 	@Override
 	public Object run() throws ZuulException {
@@ -71,6 +58,19 @@ public class PreChkFilter extends ZuulFilter{
 		
 		return null;
 	}
+	
+	//Correlation_Id 가 존재 하는지 여부를 확인하는 메서드
+	private boolean isCorrelationIdPresent() {
+		if(filterUtils.getCorrelationId() != null) {
+			return true;
+		}
+		return false;
+	}
+	
+    private String generateCorrelationId(){
+    	//실제로 tmx-correlation-id존재 여부를 확인하고, 없으면 상관관계ID의 GUID 값을 랜덤으로 생성하는 메서드
+        return java.util.UUID.randomUUID().toString();
+    }
 
 
 }

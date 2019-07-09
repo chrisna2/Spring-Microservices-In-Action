@@ -42,6 +42,8 @@ public class ThreadLocalConfig {
          2019-07-08 03:04:27.951  INFO 15528 --- [nio-8080-exec-5] com.tyn.bnk.utils.UserContextFilter      : Harang.UserContextFilter Correlation id: test-correlation-id
 		 2019-07-08 03:04:27.963  INFO 15528 --- [nio-8080-exec-5] c.t.b.controller.SimpleClientController  : Harang.SimpleClientController Correlation id: test-correlation-id
 		 2019-07-08 03:04:27.972  INFO 15528 --- [radeTreadPool-4] c.t.bnk.service.impl.SimpleServiceImpl   : Harang.SimpleServiceImpl Correlation Id:test-correlation-id <이거 띄울려고함>
+        	=> 이 모든게 @서비스에도 Correlation Id의 값을 받아오기 위한 것 ㅠㅠ
+         *
          */
         
         

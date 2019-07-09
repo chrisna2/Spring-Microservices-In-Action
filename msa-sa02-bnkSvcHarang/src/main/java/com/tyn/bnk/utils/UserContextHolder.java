@@ -2,7 +2,7 @@ package com.tyn.bnk.utils;
 
 import org.springframework.util.Assert;
 
-//ThreadLocal클래스에 UserContext를 저장하는 데 사용!
+//ThreadLocal에 UserContext를 저장하는 데 사용!
 
 /* ThreadLocal : 쓰레드 단위로 로컬 변수를 할당하게 해주는 클래스 (java 1.2 부터)
    ThreadLocal 을 이용하면 쓰레드 영역에 변수를 설정할 수 있기 때문에,

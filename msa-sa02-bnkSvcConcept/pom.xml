@@ -54,12 +54,6 @@
 			<scope>test</scope>
 		</dependency>
 		
-		<!-- MariaDB connector -->
-		<dependency>
-		    <groupId>org.mariadb.jdbc</groupId>
-		    <artifactId>mariadb-java-client</artifactId>
-		</dependency>
-		
 		<!-- Mybatis 버전 확인 필수! -->	
 		<dependency>
 			<groupId>org.mybatis.spring.boot</groupId>
@@ -89,7 +83,13 @@
 			<groupId>org.springframework.cloud</groupId>
 			<artifactId>spring-cloud-starter-openfeign</artifactId>
 		</dependency>
-		
+
+		<dependency>
+			<groupId>org.springframework.cloud</groupId>
+			<artifactId>
+				spring-cloud-starter-netflix-hystrix
+			</artifactId>
+		</dependency>
 	</dependencies>
 
 	<dependencyManagement>

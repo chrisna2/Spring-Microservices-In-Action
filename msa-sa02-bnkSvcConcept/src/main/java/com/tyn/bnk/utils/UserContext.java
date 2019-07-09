@@ -4,7 +4,7 @@ import org.springframework.stereotype.Component;
 
 @Component
 public class UserContext {
-//사용자 정보를 관리하는 DTO
+//Http요청에서 추출한 값을 보관하는  POJO 클래스
 	
     public static final String CORRELATION_ID = "tmx-correlation-id";
     public static final String AUTH_TOKEN     = "tmx-auth-token";
@@ -16,7 +16,10 @@ public class UserContext {
     private String userId = new String();
     private String empNo = new String();
 
-    public String getCorrelationId() { return correlationId;}
+    public String getCorrelationId() { 
+    	return correlationId;
+    }
+    
     public void setCorrelationId(String correlationId) {
         this.correlationId = correlationId;
     }
