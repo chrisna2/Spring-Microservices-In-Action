@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+    PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+    "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+	<mapper namespace="com.tyn.bnk.persistence.SimpleMapper">
+
+	<select id="justSelect" resultType="map">
+		 select
+		 	 b_num
+		 	,m_id
+		 	,b_want
+		 	,b_regdate
+		 	,b_stock
+		 	,b_name
+		 	,b_writer
+		 	,b_pub
+		 	,b_content
+		 	,b_iscomplete
+		 	,b_photo
+		 from 
+		 	 tbl_book
+	</select>
+	
+	<select id="srchMember" resultType="map">
+		SELECT  
+			m_id,  
+			m_pw,  
+			m_name,  
+			m_birth,  
+			m_dept,  
+			m_mail,  
+			m_photo,
+			m_addr,
+			m_tel,  
+			m_regdate,  
+			m_grade,  
+			m_fee,  
+			m_point 
+		FROM 
+			tbl_member 
+		ORDER BY 
+			m_id DESC
+		LIMIT 1000
+	</select>
+	
+	
+	<select id="srchMemberByDept" resultType="map" parameterType="int">
+		SELECT  
+			m_id,  
+			m_pw,  
+			m_name,  
+			m_birth,  
+			m_dept,  
+			m_mail,  
+			m_photo,
+			m_addr,
+			m_tel,  
+			m_regdate,  
+			m_grade,  
+			m_fee,  
+			m_point 
+		FROM 
+			tbl_member 
+		WHERE
+			m_grade = #{m_grade}
+		ORDER BY 
+			m_id DESC
+		LIMIT 1000
+	</select>
+	
+	
+
+</mapper>
