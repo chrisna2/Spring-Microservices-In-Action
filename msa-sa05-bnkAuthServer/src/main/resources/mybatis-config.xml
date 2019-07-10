@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE configuration
+  PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-config.dtd">
+<!-- mybatis와 관련한 설정을 여기서 해준다~ 원래는. -->
+<configuration>
+	<!--typeAliases: 특정 클래스에 별명을 지정 가능, 짧게 쓸수 있음 -->
+		
+</configuration>
