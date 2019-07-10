@@ -14,8 +14,8 @@ import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 @EnableResourceServer
-@EnableAuthorizationServer
 @SpringBootApplication
+@EnableAuthorizationServer
 public class MsaSa04BnkAuthServerApplication {
 
 	public static void main(String[] args) {
