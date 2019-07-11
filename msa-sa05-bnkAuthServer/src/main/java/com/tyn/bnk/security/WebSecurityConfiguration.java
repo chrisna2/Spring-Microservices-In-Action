@@ -31,16 +31,13 @@ public class WebSecurityConfiguration extends WebSecurityConfigurerAdapter{
 		
 		auth.inMemoryAuthentication()
 		    //.passwordEncoder(encoder)
-		    //.withUser("client01").password(encoder.encode("{noop}password1")).roles("USER")
+		    //.withUser("client01").password(encoder.encode("password1")).roles("USER")
 		    .withUser("client01").password("{noop}password1").roles("USER")
 		    .and()
-		    //.withUser("admin01").password(encoder.encode("{noop}password2")).roles("USER","ADMIN");
+		    //.withUser("admin01").password(encoder.encode("password2")).roles("USER","ADMIN");
 			.withUser("admin01").password("{noop}password2").roles("USER","ADMIN");
 	}
-
 /*
- * 
  * http://localhost:8901/oauth/token rudfhs
  */
-	
 }
