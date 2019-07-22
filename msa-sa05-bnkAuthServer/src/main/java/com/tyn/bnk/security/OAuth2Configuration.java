@@ -31,10 +31,11 @@ public class OAuth2Configuration extends AuthorizationServerConfigurerAdapter{
 		//우리는 DB에 연결해야 되니 데이터 소스 호출
 		clients.jdbc(datasource)
 			   .withClient("eagleeye")//어플리케이션 이름
-			   .secret(PasswordEncoderFactories.createDelegatingPasswordEncoder().encode("thisissecret"))//비밀번호:thisissecret
+			   //.secret(PasswordEncoderFactories.createDelegatingPasswordEncoder().encode("thisissecret"))//비밀번호:thisissecret
+			   .secret("{noop}thisissecret")//비밀번호:thisissecret
 			   .authorizedGrantTypes("refresh_token","password","client_credential")//그랜트 타입 설정
 			   .scopes("webclient","mobileclient");
-		*/
+		 */
 		//현재 책에서는 인메모리(in-memory) 저장소를 이용
 		clients.inMemory()
 			   .withClient("eagleeye")//어플리케이션 이름
