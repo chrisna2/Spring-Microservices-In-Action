@@ -12,6 +12,7 @@ import org.springframework.cloud.netflix.eureka.EnableEurekaClient;
 import org.springframework.cloud.openfeign.EnableFeignClients;
 import org.springframework.context.annotation.Bean;
 import org.springframework.http.client.ClientHttpRequestInterceptor;
+import org.springframework.security.oauth2.config.annotation.web.configuration.EnableResourceServer;
 import org.springframework.web.client.RestTemplate;
 
 import com.tyn.bnk.utils.UserContextInterceptor;
@@ -24,6 +25,8 @@ import com.tyn.bnk.utils.UserContextInterceptor;
 @EnableDiscoveryClient
 //5장+
 @EnableCircuitBreaker
+//7장+
+@EnableResourceServer
 public class MsaSa02BnkSvcHarangApplication {
 	
 	@Bean

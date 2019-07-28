@@ -1,0 +1,22 @@
+## [중요] 명명 규칙 : <서비스명>-<서버환경>.properties 
+## <각각의하위서비스URI>가 없는 경우 기본값으로 설정이 됨
+
+## 해당 설정의 정보는 여기 서버에서 관리되어 각각의 서버에 전달된다.
+
+##DB 설정
+example.property="Concept : Development Server Properties"
+spring.datasource.url=jdbc:oracle:thin:@localhost:1521:orcl
+spring.datasource.driver-class-name=oracle.jdbc.OracleDriver
+spring.datasource.username=concept
+spring.datasource.password={cipher}50b0f56a69069d7adaa4f4c48f75ff12be0d440bb5ad49b412da701463b49c4c
+spring.datasource.testWhileIdle=true
+spring.datasource.validationQuery=SELECT 1
+
+## mybatis-mapper 설정
+mybatis.config-location=classpath:mybatis-config.xml
+mybatis.mapper-locations=classpath:mappers/**/*.xml
+
+## mybatis 실행 로그 확인
+logging.level.org.springframework=DEBUG
+logging.level.com.tyn.bnk.persistence.*=DEBUG
+logging.file=logs/spring-boot-logging.log

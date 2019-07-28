@@ -1,0 +1,23 @@
+## [중요] 명명 규칙 : <서비스명>-<각각의하위서비스URI>.properties 
+## <각각의하위서비스URI>가 없는 경우 기본값으로 설정이 됨
+
+## 해당 설정의 정보는 여기 서버에서 관리되어 각각의 서버에 전달된다.
+
+##DB 설정
+example.property="Harang : Production Server Status"
+spring.datasource.url=jdbc:mariadb://localhost:3306/harang
+spring.datasource.driver-class-name=org.mariadb.jdbc.Driver
+spring.datasource.username=harang
+spring.datasource.password={cipher}baa56d8c9e2febcb39a15f4b367f4ab4420a982e390fc78c20fa399c60a75977
+spring.datasource.testWhileIdle=true
+spring.datasource.validationQuery=SELECT 1
+spring.datasource.hikari.maximum-pool-size=20
+
+## mybatis-mapper 설정
+mybatis.config-location=classpath:mybatis-config.xml
+mybatis.mapper-locations=classpath:mappers/**/*.xml
+
+## mybatis 실행 로그 확인
+logging.level.org.springframework=ERROR
+logging.level.com.tyn.bnk.persistence.*=ERROR
+logging.file=logs/spring-boot-logging.log

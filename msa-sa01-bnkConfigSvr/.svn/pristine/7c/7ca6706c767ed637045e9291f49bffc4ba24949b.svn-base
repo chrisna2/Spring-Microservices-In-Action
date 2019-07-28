@@ -1,0 +1,54 @@
+## [중요] 명명 규칙 : <서비스명>-<서버상태>.properties 
+## ex] harang-dev.properties
+## <각각의하위서비스URI>가 없는 경우 기본값(default)으로 설정이 됨
+## ex] harang.properties
+
+## 해당 설정의 정보는 여기 서버에서 관리되어 각각의 서버에 전달된다.
+
+example.property="ZUUL : Production Server Status"
+
+#
+management.endpoints.web.exposure.include=*
+
+# 로그레벨 설정
+logging.level.com.netflix=ERROR
+logging.level.org.springframework.web=ERROR
+logging.level.com.tyn.bnk=ERROR
+
+# 서비스 이름 대신 서비스 IP 주소 등록
+# 이 설정을 하는 이유 : 컨테이너 기반의 배포(도커)에서 컨테이너는 DNS엔트리가 없는 임의로 생성된 호스트의 이름을 부여 받아 시작한다.
+# false로 생설할 경우 해당 컨테이너에 대한 DNS엔트리가 없으므로 클라이언트 애플리케이션은 호스트 이름 위치를 정상적으로 얻지 못한다.
+# 클라우드 기반 MSA는 일시적이며 무상태여야 하므로 자유롭게 시작하고 종료될 수 있기 때뭉에 항상 true로 설정할것
+eureka.instance.prefer-ip-address=true
+
+# 해당 서비스 아이디로 라우팅되는 것들은 일단 무시 라우팅이 아래에 정의 된 목록으로 재설정된다.
+# 유레카 기반의 경로를 모두 제외하고 재설정 하고 싶다면 * 로 입력
+zuul.ignored-services=*
+# Zuul에 의해 routing 되는 모든 service의 Endpoint를 /bnk/~ 로 묶는다.
+# [예] /harang => /bnk/harang
+zuul.prefix=/bnk
+# url 명령어 재설정 : 서비스 아이디 대신에 아래처럼 간단하게 설정이 가능하다.
+zuul.routes.concept=/c/**
+zuul.routes.harang=/h/**
+# true인 경우 path를 제거 후 각 서비스에 포워딩
+      # true : 각각의 서비스 컨트롤러에 해당 하는 서비스 아이디를 입력하지도 된다.
+      # false : 각각의 서비스 컨트롤러에 해당 하는 서비스 아이디를 입력해야 된다.
+zuul.routes.harang.strip-prefix=true
+zuul.routes.concept.strip-prefix=true
+
+# (※ 참고 )정적 URL을 이용한 수동 경로 맵핑 
+# [if]파이썬으로 만든 harang-static이라는 서비스 서버가 있다고 가정함
+# zuul은 키(여기선 harangstatic) 이름으로 서비스를 내부적으로 식별한다. | /harangstatic/** : 라이선싱 서비스에 대한 정적 경로다.
+#zuul.routes.harangstatic.path=/harangstatic/** 
+# 유레카를 통하지 않고 주울이 직접 호출할 라이선싱 서비스의 대한 정적 인스턴스를 설정한다.(*문제점 : 요청을 전송할 경로가 하나만 있게된다. 분산이 안되게 됨)
+#zuul.routes.harangstatic.url=http://harang-static:8081
+# 리본에서 서비스를 찾는 데 사용하는 서비스 ID를  정의한다. -> 해당 정적 경로가 아래의 서비스 아이디로 맵핑된다.
+#zuul.routes.harangstatic.service-id=harangstatic
+# 리본에서 유레카 지원을 끈다.
+#ribbon.eureka.enabled=false
+# 요청을 라우팅하는데 사용된 서버의 목록들
+#harangstatic.ribbon.listOfServers=http://harang-static1:8081,http://harang-static2:8082
+
+# 기본 타임아웃 시간 설정 : 2.5초 
+zuul.debug.request=true
+hystrix.command.default.excution.isolation.thread.timeoutInMilliseconds=2500
