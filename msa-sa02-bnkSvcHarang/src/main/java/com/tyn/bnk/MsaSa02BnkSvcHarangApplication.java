@@ -17,15 +17,15 @@ import org.springframework.web.client.RestTemplate;
 
 import com.tyn.bnk.utils.UserContextInterceptor;
 
-//2장
+//2장+기본 스프링 부트 실행시 applicaton runner
 @SpringBootApplication
-//4장+
+//4장+유레카 서버, Feign, Discovery client
 @EnableEurekaClient
 @EnableFeignClients
 @EnableDiscoveryClient
-//5장+
+//5장+서킷브레이커 실행
 @EnableCircuitBreaker
-//7장+
+//7장+해당 마이크로 서비스를 보호자원으로 지정
 @EnableResourceServer
 public class MsaSa02BnkSvcHarangApplication {
 	

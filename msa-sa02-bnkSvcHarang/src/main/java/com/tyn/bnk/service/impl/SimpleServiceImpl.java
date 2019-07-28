@@ -26,7 +26,6 @@ import com.tyn.bnk.utils.UserContextHolder;
 @DefaultProperties(
 			threadPoolKey = "defaultTreadPool",
 			threadPoolProperties = {
-					//스레드풀의 스레드 갯수를 정의
 					@HystrixProperty(name = "coreSize", value="30"),
 					//스레드풀 앞에 배치할 큐와 큐에 넣을 요청 수를 정의
 					@HystrixProperty(name = "maxQueueSize", value = "10")
@@ -101,7 +100,6 @@ public class SimpleServiceImpl implements SimpleService {
 		result = feignClient.getEmpInfo(emp_no);
 		return result;
 	}
-	
 	//일부러 에러를 발생시키려고 만든 임시 메소드
 	public void ramdomlyRunning() {
 		Random rand = new Random();
@@ -154,7 +152,7 @@ public class SimpleServiceImpl implements SimpleService {
 	public List<Map<String, Object>> srchMemberByGrade(int m_grade){
 		logger.info("Harang.SimpleServiceImpl Correlation Id:{}",UserContextHolder.getContext().getCorrelationId());
 		ramdomlyRunning();
-		return mapper.srchMemberByDept(m_grade);
+		return mapper.srchMemberByGrade(m_grade);
 	}
 	//위에서 정의한 fallback함수
 	public List<Map<String, Object>> fallbackSrchMemberByGrade(int m_grade){
@@ -170,6 +168,16 @@ public class SimpleServiceImpl implements SimpleService {
 		resultList.add(failMsg);
 		
 		return resultList;
+	}
+
+	@Override
+	public List<Map<String, Object>> srchAllTblLesson() {
+		return mapper.srchAllTblLesson();
+	}
+
+	@Override
+	public List<Map<String, Object>> srchAllTblParttime() {
+		return mapper.srchAllTblParttime();
 	}
 
 }

@@ -48,7 +48,7 @@ public class WebSecurityConfiguration extends WebSecurityConfigurerAdapter{
 			.dataSource(datasource)
 			.usersByUsernameQuery("select m_id as username, m_pw as password, true from tbl_member where m_id=?")
 			.authoritiesByUsernameQuery("select m_id as username, authority from tbl_authorities where m_id=?")
-			//.passwordEncoder(encoder)
+			.passwordEncoder(encoder)
 			;
 	}
 }

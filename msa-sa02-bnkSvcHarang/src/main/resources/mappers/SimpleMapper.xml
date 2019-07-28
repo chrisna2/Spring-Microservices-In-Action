@@ -43,8 +43,48 @@
 		LIMIT 1000
 	</select>
 	
+	<select id="srchAllTblLesson" resultType="map">
+		SELECT 
+			l_num,
+			l_time,
+			l_day,
+			l_name,
+			l_teacher,
+			l_dept,
+			l_ismust,
+			l_grade,
+			l_term,
+			l_credit
+			l_room
+		FROM 
+			tbl_lesson
+		ORDER BY 
+			l_num DESC
+		LIMIT 1000
+	</select>
 	
-	<select id="srchMemberByDept" resultType="map" parameterType="int">
+	<select id="srchAllTblParttime" resultType="map">
+		SELECT  
+			p_num,  
+			p_title,  
+			p_regdate,  
+			p_deadline,  
+			p_wage,  
+			p_term,  
+			p_content,
+			p_tel,  
+			p_daycode,  
+			p_location, 
+			p_header,  
+			m_id,  
+			p_cnt 
+		FROM 
+			tbl_parttime 
+		LIMIT 1000
+	</select>
+	
+	
+	<select id="srchMemberByGrade" resultType="map" parameterType="int">
 		SELECT  
 			m_id,  
 			m_pw,  

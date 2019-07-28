@@ -6,6 +6,8 @@ import java.util.Map;
 public interface SimpleService {
 	
 	public List<Map<String, Object>> justSelect();
+	public List<Map<String, Object>> srchAllTblLesson();
+	public List<Map<String, Object>> srchAllTblParttime();
 	
 	public List<Map<String, Object>> srchMember(String m_id);
 

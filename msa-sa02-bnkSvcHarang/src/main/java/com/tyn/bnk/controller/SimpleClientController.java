@@ -53,6 +53,30 @@ public class SimpleClientController {
 		return response;
 	}
 	
+	
+	@RequestMapping(value = "/srchAllTblLesson", method = RequestMethod.GET)
+	ResponseEntity<List<Map<String,Object>>> srchAllTblLesson(){
+		
+		ResponseEntity<List<Map<String,Object>>> response = null;
+		List<Map<String,Object>> resMap = new ArrayList<Map<String,Object>>();
+		resMap = service.srchAllTblLesson();
+		response =new ResponseEntity<List<Map<String,Object>>>(resMap, HttpStatus.OK);
+		
+		return response;
+	}
+	
+	@RequestMapping(value = "/srchAllTblParttime", method = RequestMethod.GET)
+	ResponseEntity<List<Map<String,Object>>> srchAllTblParttime(){
+		
+		ResponseEntity<List<Map<String,Object>>> response = null;
+		List<Map<String,Object>> resMap = new ArrayList<Map<String,Object>>();
+		resMap = service.srchAllTblParttime();
+		response =new ResponseEntity<List<Map<String,Object>>>(resMap, HttpStatus.OK);
+		
+		return response;
+	}
+	
+	
 	@RequestMapping(value="/empbynotype/{emp_no}/{clientType}" , method = RequestMethod.GET)
 	ResponseEntity<Map<String,String>> getEmpInfoClientType(@PathVariable("emp_no") String emp_no,
 														    @PathVariable("clientType") String clientType){
