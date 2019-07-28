@@ -7,42 +7,45 @@ public class UserContext {
 //사용자 정보를 관리하는 DTO
 	
     public static final String CORRELATION_ID = "tmx-correlation-id";
-    public static final String AUTH_TOKEN     = "tmx-auth-token";
+    public static final String AUTH_TOKEN     = "Authorization";
     public static final String USER_ID        = "tmx-user-id";
     public static final String EMP_NO         = "tmx-emp-no";
 
-    private String correlationId= new String();
-    private String authToken= new String();
-    private String userId = new String();
-    private String empNo = new String();
+    private static final ThreadLocal<String> correlationId= new ThreadLocal<String>();
+    private static final ThreadLocal<String> authToken= new ThreadLocal<String>();
+    private static final ThreadLocal<String> userId = new ThreadLocal<String>();
+    private static final ThreadLocal<String> empNo = new ThreadLocal<String>();
 
-    public String getCorrelationId() { return correlationId;}
-    public void setCorrelationId(String correlationId) {
-        this.correlationId = correlationId;
+    public static String getCorrelationId() { 
+    	return correlationId.get();
+    }
+    
+    public static void setCorrelationId(String cId) {
+        correlationId.set(cId);
     }
 
-    public String getAuthToken() {
-        return authToken;
+    public static String getAuthToken() {
+        return authToken.get();
     }
 
-    public void setAuthToken(String authToken) {
-        this.authToken = authToken;
+    public static void setAuthToken(String aToken) {
+    	authToken.set(aToken);
     }
 
-    public String getUserId() {
-        return userId;
+    public static String getUserId() {
+        return userId.get();
     }
 
-    public void setUserId(String userId) {
-        this.userId = userId;
+    public static void setUserId(String uId) {
+        userId.set(uId);
     }
 
-    public String getEmpNo() {
-        return empNo;
+    public static String getEmpNo() {
+        return empNo.get();
     }
 
-    public void setEmpNo(String empNo) {
-        this.empNo = empNo;
+    public static void setEmpNo(String eNo) {
+        empNo.set(eNo);
     }
 
 }

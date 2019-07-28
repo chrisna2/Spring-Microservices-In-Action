@@ -23,7 +23,6 @@ public class UserContextFilter implements Filter {
     public void doFilter(ServletRequest servletRequest, ServletResponse servletResponse, FilterChain filterChain)
             throws IOException, ServletException {
 
-
         HttpServletRequest httpServletRequest = (HttpServletRequest) servletRequest;
 
         //Http 호출 헤더에서 검색한 값을 UserContextHolder의 UserContext에 저장한다.
