@@ -1,1 +1,0 @@
-package com.tyn.bnk.config;
