@@ -1,5 +1,7 @@
 package com.tyn.bnk.security;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Primary;
@@ -13,14 +15,18 @@ import com.tyn.bnk.config.SvcConfig;
 
 public class JwtStoreConfig {
 	
+	private static final Logger logger = LoggerFactory.getLogger(JwtStoreConfig.class);
+	
 	@Autowired
 	SvcConfig svcConfig;
 	
 	@Bean
 	public JwtAccessTokenConverter jwtAccessConverter() {
+		//JWT와 Oauth2서버 사이의 변환기로 작동한다.
 		JwtAccessTokenConverter converter = new JwtAccessTokenConverter();
+		logger.info("@JwtStoreConfig JwtSigningKey :"+svcConfig.getJwtSigningKey());
+		//토큰 서명에 사용되는 서명 키를 정의 한다.
 		converter.setSigningKey(svcConfig.getJwtSigningKey());
-		
 		return converter;
 	}
 	

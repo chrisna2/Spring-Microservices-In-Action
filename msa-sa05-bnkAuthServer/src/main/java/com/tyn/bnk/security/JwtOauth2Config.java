@@ -8,7 +8,6 @@ import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.oauth2.config.annotation.configurers.ClientDetailsServiceConfigurer;
 import org.springframework.security.oauth2.config.annotation.web.configuration.AuthorizationServerConfigurerAdapter;
 import org.springframework.security.oauth2.config.annotation.web.configurers.AuthorizationServerEndpointsConfigurer;
-import org.springframework.security.oauth2.provider.token.DefaultTokenServices;
 import org.springframework.security.oauth2.provider.token.TokenEnhancer;
 import org.springframework.security.oauth2.provider.token.TokenEnhancerChain;
 import org.springframework.security.oauth2.provider.token.TokenStore;
@@ -28,14 +27,12 @@ public class JwtOauth2Config extends AuthorizationServerConfigurerAdapter{
 	private TokenStore tknStore;
 	
 	@Autowired
-	private DefaultTokenServices defaultTknSvcs;
-	
-	@Autowired
 	private JwtAccessTokenConverter jwtAcsTknCoverter;
 	
 	@Autowired
 	private TokenEnhancer jwtTknEnhancer;
 	
+
 	
 	@Override
 	public void configure(AuthorizationServerEndpointsConfigurer endpoints) throws Exception {
@@ -71,15 +68,12 @@ public class JwtOauth2Config extends AuthorizationServerConfigurerAdapter{
 			   .authorizedGrantTypes("refresh_token","password","client_credential")//그랜트 타입 설정
 			   .scopes("webclient","mobileclient");
 		 */
-		
 		//현재 책에서는 인메모리(in-memory) 저장소를 이용
 		clients.inMemory()
 			   .withClient("eagleeye")//어플리케이션 이름
-			   //.secret(PasswordEncoderFactories.createDelegatingPasswordEncoder().encode("{noop}thisissecret"))//비밀번호:thisissecret
+			   //.secret(PasswordEncoderFactories.createDelegatingPasswordEncoder().encode("thisissecret"))//비밀번호:thisissecret
 			   .secret("{noop}thisissecret")//비밀번호:thisissecret
 			   .authorizedGrantTypes("refresh_token","password","client_credential")//
 			   .scopes("webclient","mobileclient");
 	}
-	
-	
 }

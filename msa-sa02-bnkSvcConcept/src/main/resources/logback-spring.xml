@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration scen="true" scanPeriod="3 seconds" debug="true">
+
+	<appender name="console"
+		class="ch.qos.logback.core.ConsoleAppender">
+		<layout class="ch.qos.logback.classic.PatternLayout">
+			<Pattern>
+				[%level][%C][%M][%L]%msg%n
+			</Pattern>
+		</layout>
+	</appender>
+	
+	<!-- log4sql -->
+	<logger name="jdbc" additivity="false" level="off"></logger>
+	<logger name="jdbc.sqlonly" additivity="false" level="off"></logger>
+	<logger name="jdbc.resultsettable" additivity="false"
+		level="off"></logger>
+	<logger name="jdbc.sqltiming" additivity="false" level="off"></logger>
+	<logger name="jdbc.audit" additivity="false" level="off"></logger>
+	<logger name="jdbc.resultset" additivity="false" level="off"></logger>
+	<!-- //log4sql -->
+	
+	<logger name="org" additivity="false" level="info">
+		<appender-ref ref="console" />
+	</logger>
+	
+	<logger name="oracle.jdbc" additivity="false" level="info">
+		<appender-ref ref="console" />
+	</logger>
+	
+	<root level="info">
+		<appender-ref ref="console" />
+	</root>
+
+</configuration>
