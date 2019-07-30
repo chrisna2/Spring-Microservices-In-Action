@@ -34,21 +34,22 @@ public class WebSecurityConfiguration extends WebSecurityConfigurerAdapter{
 	
 	@Override//사용자와 패스워드, 역활을 정의한다.
 	protected void configure(AuthenticationManagerBuilder auth) throws Exception {
+		//일단 복잡하게 DB에도 암호화가 필요해서 그걸 피하려고 테스트용 인코더 설정
 		PasswordEncoder encoder = new PasswordEncoderTest();
 		/*
 		auth.inMemoryAuthentication()
 		    //.passwordEncoder(encoder)
-		    //.withUser("client01").password(encoder.encode("password1")).roles("USER")
-		    .withUser("client01").password("{noop}password1").roles("USER")
+		    .withUser("client01").password(encoder.encode("password1")).roles("USER")
+		    //.withUser("client01").password("{noop}password1").roles("USER")
 		    .and()
-		    //.withUser("admin01").password(encoder.encode("password2")).roles("USER","ADMIN");
-			.withUser("admin01").password("{noop}password2").roles("USER","ADMIN");
-		*/
+		    .withUser("admin01").password(encoder.encode("password2")).roles("USER","ADMIN");
+			//.withUser("admin01").password("{noop}password2").roles("USER","ADMIN");
+		 */
+		
 		auth.jdbcAuthentication()
 			.dataSource(datasource)
 			.usersByUsernameQuery("select m_id as username, m_pw as password, true from tbl_member where m_id=?")
 			.authoritiesByUsernameQuery("select m_id as username, authority from tbl_authorities where m_id=?")
-			.passwordEncoder(encoder)
-			;
+			.passwordEncoder(encoder);
 	}
 }

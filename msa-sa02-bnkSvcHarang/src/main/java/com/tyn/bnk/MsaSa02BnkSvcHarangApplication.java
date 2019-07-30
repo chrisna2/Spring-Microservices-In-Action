@@ -48,11 +48,14 @@ public class MsaSa02BnkSvcHarangApplication {
         return template;
 	}
 	
-	//7장+
+	//7장+JWT에서의 경우 OAuth2RestTemplate가JWT 기반의 토큰을 (harnag -> concept) 전파하지 않기 때문에 불필요
+	//그냥 위에 restTemplate에 빈을 추가해 토큰으로 사용한다.
+	/*
 	@Bean
 	public OAuth2RestTemplate restTemplate(UserInfoRestTemplateFactory factory) {
 		return factory.getUserInfoRestTemplate();
 	}
+	*/
 	
 	public static void main(String[] args) {
 		SpringApplication.run(MsaSa02BnkSvcHarangApplication.class, args);

@@ -80,17 +80,17 @@ public class SimpleServiceImpl implements SimpleService {
 				logger.info("I am using the rest client");
 				result = restClient.getEmpInfo(emp_no);
 				break;
-			case "oAuth2Rest":
-				logger.info("I am using the oAuth2 rest client");
-				result = restClient.getOauth2EmpInfo(emp_no);
-				break;
+//			case "oAuth2Rest":
+//				logger.info("I am using the oAuth2 rest client");
+//				result = restClient.getOauth2EmpInfo(emp_no);
+//				break;
 			case "discovery":
 				logger.info("I am using the discovery client");
 				result = discoveryClient.getEmpInfo(emp_no);
 				break;
 			default:
 				logger.info("I am using the rest client");
-				result = restClient.getEmpInfo(emp_no);
+				result = feignClient.getEmpInfo(emp_no);
 		}
 		
 		return result;

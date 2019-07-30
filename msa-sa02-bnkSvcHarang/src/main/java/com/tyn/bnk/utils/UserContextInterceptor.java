@@ -21,8 +21,9 @@ public class UserContextInterceptor implements ClientHttpRequestInterceptor {
             throws IOException {
 
         HttpHeaders headers = request.getHeaders();
-        headers.add(UserContext.CORRELATION_ID, UserContextHolder.getContext().getCorrelationId());
         //서비스 호출을을 위해 준비할 Http요청 해더를 가져와 UserContex에 저장된 Correlation_Id를 추가한다. 다른 어떤 정보도 가져올수 있다.
+        headers.add(UserContext.CORRELATION_ID, UserContextHolder.getContext().getCorrelationId());
+        //Http 헤더에 인증 토큰을 추가한다.
         headers.add(UserContext.AUTH_TOKEN, UserContextHolder.getContext().getAuthToken());
 
         return execution.execute(request, body);

@@ -1,4 +1,3 @@
-
 package com.tyn.bnk.client;
 
 import java.util.HashMap;
@@ -9,19 +8,14 @@ import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpMethod;
 import org.springframework.http.ResponseEntity;
-import org.springframework.security.oauth2.client.OAuth2RestTemplate;
 import org.springframework.stereotype.Component;
 import org.springframework.web.client.RestTemplate;
 
 import com.tyn.bnk.utils.UserContext;
 
-//대안 1 - restTemplate
 @Component
 public class ConceptRestClient {
-
-	@Autowired
-	RestTemplate restTemplate;
-
+	
 	/* 로컬에서 실행하기
 	  	
 		1.Zuul 및 Eureka를 포함하여 로컬에서 모든 서비스를 실행하는 경우 8 장에서 Zuul 서버를 Eureka에 등록하지 않습니다.
@@ -38,20 +32,27 @@ public class ConceptRestClient {
 	
 	private static final Logger logger = LoggerFactory.getLogger(ConceptRestClient.class);
 	
+	@Autowired
+	RestTemplate restTemplate;
+	
 	public Map getEmpInfo(String emp_no){
+		
+		logger.debug("In Licensing Service.getOrganization: {}", UserContext.getCorrelationId());
+		
 		ResponseEntity<Map> restExchange = restTemplate.exchange(
 				//"http://concept/emp/{emp_no}", //concept은 서비스 아이디가 아니라 docker-compose.yml에서 설정한 서버의 명칭이다 <중요!>
-				"http://localhost:5555/bnk/c/emp/{emp_no}",
+				"http://zuulSvcGateway:5555/bnk/c/emp/{emp_no}",
 				//localhost:5555
 				HttpMethod.GET, 
 				null,
 				Map.class,
 				emp_no);
+		
 		return restExchange.getBody();
 	} 
 	
 	// ↕ 이전 버전 을 변형한 것이나 결과는 똑같다. 이제 부터는 모두 httpheader에 Authritication이 없으면 안된다.
-	
+	/*
 	@Autowired
 	OAuth2RestTemplate oauth2RestTemplate;
 	//OAuth2RestTemplate 표준 restTemplate에 대한 드롭인 대체품으로 Oauth2 액세스 토큰에 전파를 처리한다. 
@@ -62,7 +63,7 @@ public class ConceptRestClient {
 		logger.debug("In Licensing Service.getOrganization: {}", UserContext.getCorrelationId());
 		
 		ResponseEntity<HashMap> restExchange = restTemplate.exchange(
-				"http://localhost:5555/bnk/c/emp/{emp_no}", //로컬에서 테스트를 할 경우 localhost:5555로 통일함
+				"http://zuulSvcGateway:5555/bnk/c/emp/{emp_no}", // 갑자기 된다? 환장함
 				//"http://zuulserver:5555/bnk/c/emp/{emp_no}", //이건 docker에 이미지를 올릴 경우..
 				HttpMethod.GET,
 				null,
@@ -71,8 +72,6 @@ public class ConceptRestClient {
 		
 		return restExchange.getBody();
 	}
-	
-	
-	
-	
+	*/
+
 }
