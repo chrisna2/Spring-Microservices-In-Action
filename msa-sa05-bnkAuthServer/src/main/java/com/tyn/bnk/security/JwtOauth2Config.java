@@ -3,6 +3,7 @@ package com.tyn.bnk.security;
 import java.util.Arrays;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.core.userdetails.UserDetailsService;
@@ -35,31 +36,49 @@ public class JwtOauth2Config extends AuthorizationServerConfigurerAdapter{
 	@Autowired
 	private JwtAccessTokenConverter jwtAcsTknCoverter;
 	
-	@Autowired
-	private TokenEnhancer jwtTknEnhancer;
-	
-
-	
 	@Override
 	public void configure(AuthorizationServerEndpointsConfigurer endpoints) throws Exception {
 		TokenEnhancerChain tknEnhancerChain = new TokenEnhancerChain();
 		
-		tknEnhancerChain.setTokenEnhancers(Arrays.asList(jwtTknEnhancer,jwtAcsTknCoverter));
+		//tknEnhancerChain.setTokenEnhancers(Arrays.asList(jwtTknEnhancer,jwtAcsTknCoverter)); 
+		//이렇게 인터페이스를 통해 tokenEnhancer을 연결하게 되면 제대로 인식이 안되고 추가가 안되서 그냥 여기다 집어 넣으니 실행 됨
+		tknEnhancerChain.setTokenEnhancers(Arrays.asList(tokenEnhancer(),jwtAcsTknCoverter));
 		
 		endpoints.tokenStore(tknStore)//JwtStoreConfig에 정의 한 tokenStore가 여기에 삽입 된다.
 				 .accessTokenConverter(jwtAcsTknCoverter)//이것은 스프링 시큐리티 Oauth2 코드가 JWT를 사용하도록 연결한다.
+				 .tokenEnhancer(tknEnhancerChain)//configure()호출할때 전달된 endspoints 매개변수에 TokenEnhancerChain을 연결한다.
 				 .authenticationManager(authManager)
 				 .userDetailsService(userDtlSvc);
 	}	
-	/* 
-		//기존 버전
-		@Override // 이 메서드는 AuthorizationServerConfigurerAdapter 안에서 사용될 여러 컴포넌트를 정의한다.
-		//이 코드는 스프링에 기본 인증 관리자와 스프링과 함께 제공되는 사용자 상세 서비스를 이용한다고 알려준다.
-		public void configure(AuthorizationServerEndpointsConfigurer endpoints) throws Exception {
-			endpoints.authenticationManager(authenticationManager)
-					 .userDetailsService(userDetailsService);
+
+    // 토큰에 추가적인 정보를 넣어서 저장한다.
+    @Bean
+    public TokenEnhancer tokenEnhancer() {
+        return new JwtTokenEnhancer();
+    }
+    
+    /*
+    	JWT : eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzb210aGluZyI6ImFudGhpbmdwbGVhc2UiLCJ1c2VyX25hbWUiOiJhZG1pbjAxIiwic2NvcGUiOlsid2ViY2xpZW50Il0sIlRFU1RfVkFVTEVfS0VZIjoiVGVzdCBWYWx1ZS4gcGxlYXNlIG91dCIsImV4cCI6MTU2NDUxNTQwMSwibWVtYmVyX25hbWUiOiLrgpjtmITquLAiLCJhdXRob3JpdGllcyI6WyJST0xFX0FETUlOIl0sImp0aSI6IjZjOTFjNjgzLTIwMWEtNDk0Mi1iYTkyLThkYWJjZDMyZDI0MiIsImNsaWVudF9pZCI6ImVhZ2xlZXllIn0.6Gz5qaunOtN3RvKHo2qFIETROE_hcdiJtmCFXGo1Jfg
+    
+    	=>
+    
+   		결과 : 
+   		{
+			 "somthing": "anthingplease",
+			 "user_name": "admin01",
+			 "scope": [
+			  "webclient"
+			 ],
+			 "TEST_VAULE_KEY": "Test Value. please out",
+			 "exp": 1564515401,
+			 "member_name": "나현기",
+			 "authorities": [
+			  "ROLE_ADMIN"
+			 ],
+			 "jti": "6c91c683-201a-4942-ba92-8dabcd32d242",
+			 "client_id": "eagleeye"
 		}
-	 */
+     */
 		
 	@Override // 서비스에 등록될 클라이언트를 정의 하는 configure() 메서드를 정의한다.
 	public void configure(ClientDetailsServiceConfigurer clients) throws Exception {
@@ -81,8 +100,5 @@ public class JwtOauth2Config extends AuthorizationServerConfigurerAdapter{
 			   .secret("{noop}thisissecret")//비밀번호:thisissecret
 			   .authorizedGrantTypes("refresh_token","password","client_credential")//
 			   .scopes("webclient","mobileclient");
-		
-		
-		
 	}
 }

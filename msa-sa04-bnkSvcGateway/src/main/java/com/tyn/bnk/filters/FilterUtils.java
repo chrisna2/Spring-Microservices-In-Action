@@ -7,9 +7,10 @@ import org.springframework.stereotype.Component;
 public class FilterUtils {
 
     public static final String CORRELATION_ID = "tmx-correlation-id";
-    public static final String AUTH_TOKEN     = "tmx-auth-token";
+    public static final String AUTH_TOKEN     = "Authorization";//이거 당연히 바꿔 줘야지 ㅉㅉ
     public static final String USER_ID        = "tmx-user-id";
     public static final String EMP_NO         = "tmx-emp-no";//임의로 변경
+    public static final String M_NAME         = "tmx-m_name";//임의로 추가
     public static final String PRE_FILTER_TYPE = "pre";//사전 필터 클래스
     public static final String POST_FILTER_TYPE = "post";//사후 필터 클래스
     public static final String ROUTE_FILTER_TYPE = "route";//경로 필터 클래스
@@ -39,11 +40,26 @@ public class FilterUtils {
             return  ctx.getZuulRequestHeaders().get(EMP_NO);
         }
     }
-    //임의로 변경
     public void setEmpNo(String empNo){
         RequestContext ctx = RequestContext.getCurrentContext();
         ctx.addZuulRequestHeader(EMP_NO,  empNo);
     }
+    
+    /*임의로 추가*/
+    public  final String getMName(){
+    	RequestContext ctx = RequestContext.getCurrentContext();
+    	if (ctx.getRequest().getHeader(M_NAME) !=null) {
+    		return ctx.getRequest().getHeader(M_NAME);
+    	}
+    	else{
+    		return  ctx.getZuulRequestHeaders().get(M_NAME);
+    	}
+    }
+    public void setMName(String mName){
+    	RequestContext ctx = RequestContext.getCurrentContext();
+    	ctx.addZuulRequestHeader(M_NAME,  mName);
+    }
+    
     public final String getUserId(){
         RequestContext ctx = RequestContext.getCurrentContext();
         if (ctx.getRequest().getHeader(USER_ID) !=null) {

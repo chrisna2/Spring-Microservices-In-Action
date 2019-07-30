@@ -23,6 +23,22 @@ public class JwtStoreConfig {
 	SvcConfig svcConfig;
 	
 	@Bean
+	public TokenStore tokenStore() {
+		
+		return new JwtTokenStore(jwtAccessConverter());
+	}
+	
+	@Bean
+	public DefaultTokenServices tokenServices() {
+		DefaultTokenServices dts = new DefaultTokenServices();
+		dts.setTokenStore(tokenStore());
+		dts.setSupportRefreshToken(true);
+		
+		return dts;
+	}
+	
+	@Bean
+	@Primary//특정 타입의 빈이 둘이상일때 @Primary로 표시된 타입을 자동으로 주입하도록 스프링에 설정하는 역활을 한다.
 	public JwtAccessTokenConverter jwtAccessConverter() {
 		//JWT와 Oauth2서버 사이의 변환기로 작동한다.
 		JwtAccessTokenConverter converter = new JwtAccessTokenConverter();
@@ -31,24 +47,8 @@ public class JwtStoreConfig {
 		return converter;
 	}
 	
-	@Bean
-	public TokenStore tokenStore() {
-		
-		return new JwtTokenStore(jwtAccessConverter());
-	}
-	
-	@Bean
-	@Primary//특정 타입의 빈이 둘이상일때 @Primary로 표시된 타입을 자동으로 주입하도록 스프링에 설정하는 역활을 한다.
-	public DefaultTokenServices tokenServices() {
-		DefaultTokenServices dts = new DefaultTokenServices();
-		dts.setTokenStore(tokenStore());
-		dts.setSupportRefreshToken(true);
-		
-		return dts;
-	}
-	/*
-	@Bean
-	public TokenEnhancer jwtTokenEnhancer() {
-		return new JwtTokenEnhancer();
-	}*/
+//	@Bean
+//	public TokenEnhancer jwtTokenEnhancer() {
+//		return new JwtTokenEnhancer();
+//	}
 }

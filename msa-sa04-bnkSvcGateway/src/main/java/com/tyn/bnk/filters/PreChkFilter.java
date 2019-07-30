@@ -8,6 +8,10 @@ import org.springframework.stereotype.Component;
 import com.netflix.zuul.ZuulFilter;
 import com.netflix.zuul.context.RequestContext;
 import com.netflix.zuul.exception.ZuulException;
+import com.tyn.bnk.config.SvcConfig;
+
+import io.jsonwebtoken.Claims;
+import io.jsonwebtoken.Jwts;
 
 @Component
 public class PreChkFilter extends ZuulFilter{
@@ -21,6 +25,10 @@ public class PreChkFilter extends ZuulFilter{
 	@Autowired
 	FilterUtils filterUtils;
 	//모든 필터에서 공통으로 사용되는 기능을 FilterUtils 클래스에 담는다.
+	
+	//7장+
+    @Autowired
+    private SvcConfig svcConfig;
 	
 	@Override
 	public String filterType() {
@@ -42,6 +50,7 @@ public class PreChkFilter extends ZuulFilter{
 	
 	@Override
 	public Object run() throws ZuulException {
+		RequestContext ctx = RequestContext.getCurrentContext();
 		// TODO 서비스가 필터를 통과 할때 마다 실행되는 코드. 
 		// 현재 이 메서드에서는 tmx-correlation-id의 존재여부를 확인하고 없다면 생성하고 
 		// tmx-correlation-id HTTP 헤더를 설정한다.
@@ -52,10 +61,10 @@ public class PreChkFilter extends ZuulFilter{
 			filterUtils.setCorrelationId(generateCorrelationId());
 			logger.debug("tmx-correlation-id generated in Pre Check Filter: {}.",filterUtils.getCorrelationId());
 		}
-		
-        RequestContext ctx = RequestContext.getCurrentContext();
-        logger.debug("Processing incoming request for {}.",  ctx.getRequest().getRequestURI());
-		
+		String name = getMemberName();
+		logger.info("@PreChkFilter_JWT_Member Name : " + name);
+	    filterUtils.setMName(name);
+        logger.info("Processing incoming request for {}.",  ctx.getRequest().getRequestURI());
 		return null;
 	}
 	
@@ -70,6 +79,33 @@ public class PreChkFilter extends ZuulFilter{
     private String generateCorrelationId(){
     	//실제로 tmx-correlation-id존재 여부를 확인하고, 없으면 상관관계ID의 GUID 값을 랜덤으로 생성하는 메서드
         return java.util.UUID.randomUUID().toString();
+    }
+    
+    private String getMemberName(){
+        String result="";
+        logger.info("@authToken1"+filterUtils.getAuthToken());
+        
+        if (filterUtils.getAuthToken()!=null){
+        	//HTTP "Authorization" 헤더에서 토큰을 파싱한다.
+            String authToken = filterUtils.getAuthToken().replace("bearer ","");
+            logger.info("@authToken2"+authToken);
+            try {
+            	//토큰 서명에 사용된 서명키를 전달하며, Jwts 클래스를 사용해 토큰을 파싱한다.
+                Claims claims = Jwts.parser()
+			                        .setSigningKey(svcConfig.getJwtSigningKey().getBytes("UTF-8"))
+			                        .parseClaimsJws(authToken).getBody();
+                logger.info("\n claims"+claims.toString()
+                			+"\n Subject:"+claims.getSubject()
+                			+"\n ID:"+claims.getId());
+               
+                //"member_name"을 JWT토큰을에서 가져온다
+                result = (String) claims.get("member_name");
+            }
+            catch (Exception e){
+                e.printStackTrace();
+            }
+        }
+        return result;
     }
 
 
