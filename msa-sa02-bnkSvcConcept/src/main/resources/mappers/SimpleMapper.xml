@@ -36,4 +36,62 @@
 		 where
 		 	emp_no = #{emp_no}
 	</select>
+	
+	
+	<insert id="saveEmpInfo" parameterType="map">
+		<selectKey resultType="string" keyProperty="EMP_NO" order="BEFORE">
+		<![CDATA[
+			SELECT 
+				TO_CHAR(MAX(EMP_NO)+1) AS EMP_NO
+			FROM
+				TBL_EMP
+		]]>
+		</selectKey>
+		<![CDATA[
+			INSERT INTO 
+			TBL_EMP(
+				EMP_NO,      
+				EMP_NM,      
+				DEPT_CODE,   
+				ROL_POSITION,
+				JOIN_DATE,  
+				RETIRE_DATE, 
+				SAL_TYPE,    
+				MONTH_SAL,   
+				REG_DATE
+			)		
+			VALUES(
+				TO_NUMBER(#{EMP_NO}),
+				#{EMP_NM}, 
+				#{DEPT_CODE}, 
+				#{ROL_POSITION}, 
+				SYSDATE, 
+				TO_DATE('9999-12-31', 'YYYY-MM-DD'), 
+				#{SAL_TYPE}, 
+				TO_NUMBER(#{MONTH_SAL}), 
+				SYSDATE
+			)
+    	]]>
+	</insert>
+	
+	
+	<update id="updEmpInfo" parameterType="map">
+		<![CDATA[
+			UPDATE TBL_EMP SET 
+				EMP_NM = NVL(#{EMP_NM},EMP_NM),     
+				DEPT_CODE = NVL(#{DEPT_CODE},DEPT_CODE),   
+				ROL_POSITION = NVL(#{ROL_POSITION},ROL_POSITION),
+				JOIN_DATE = NVL(TO_DATE(#{JOIN_DATE}, 'YYYY-MM-DD'),JOIN_DATE),
+				RETIRE_DATE = NVL(TO_DATE(#{RETIRE_DATE}, 'YYYY-MM-DD'),RETIRE_DATE), 
+				SAL_TYPE = NVL(#{SAL_TYPE},SAL_TYPE),    
+				MONTH_SAL = NVL(TO_NUMBER(#{MONTH_SAL}),MONTH_SAL),   
+				REG_DATE = SYSDATE
+			WHERE
+				EMP_NO = #{EMP_NO}
+    	]]>	
+	</update>
+	
+	
+	
+	
 </mapper>

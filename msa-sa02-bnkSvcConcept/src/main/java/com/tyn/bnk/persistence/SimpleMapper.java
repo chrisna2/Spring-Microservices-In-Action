@@ -9,7 +9,8 @@ import org.apache.ibatis.annotations.Mapper;
 public interface SimpleMapper {
 	
 	public List<Map<String, String>> justSelect();
-	
 	public Map<String, String> getEmpInfo(String emp_no);
+	public int saveEmpInfo(Map<String, String> map);
+	public int updEmpInfo(Map<String, String> map);
 
 }

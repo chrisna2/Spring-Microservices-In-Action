@@ -4583,3 +4583,86 @@ Using generated security password: aec3f647-261f-434b-a267-0e618898eef0
  java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1127)
  java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
  java.lang.Thread.run(Thread.java:745)
+2019-08-02 22:28:05.756  INFO 8392 --- [main] c.t.bnk.MsaSa02BnkSvcHarangApplication   : The following profiles are active: default
+2019-08-02 22:28:06.554  WARN 8392 --- [main] o.s.boot.actuate.endpoint.EndpointId     : Endpoint ID 'service-registry' contains invalid characters, please migrate to a valid format.
+2019-08-02 22:28:06.578  WARN 8392 --- [main] o.s.boot.actuate.endpoint.EndpointId     : Endpoint ID 'hystrix.stream' contains invalid characters, please migrate to a valid format.
+2019-08-02 22:28:06.792  INFO 8392 --- [main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=516fa110-aa33-30af-afb8-4e42be310a27
+2019-08-02 22:28:06.817  INFO 8392 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'com.tyn.bnk.client.ConceptFeignClient' of type [org.springframework.cloud.openfeign.FeignClientFactoryBean] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-08-02 22:28:06.948  INFO 8392 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$1615ea72] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-08-02 22:28:07.185  INFO 8392 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration' of type [org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration$$EnhancerBySpringCGLIB$$322fed6f] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-08-02 22:28:07.480  INFO 8392 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2019-08-02 22:28:07.510  INFO 8392 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2019-08-02 22:28:07.510  INFO 8392 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.21]
+2019-08-02 22:28:07.660  INFO 8392 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2019-08-02 22:28:07.660  INFO 8392 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1886 ms
+2019-08-02 22:28:07.783  WARN 8392 --- [main] c.n.c.sources.URLConfigurationSource     : No URLs will be polled as dynamic configuration sources.
+2019-08-02 22:28:07.783  INFO 8392 --- [main] c.n.c.sources.URLConfigurationSource     : To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2019-08-02 22:28:07.796  INFO 8392 --- [main] c.netflix.config.DynamicPropertyFactory  : DynamicPropertyFactory is initialized with configuration sources: com.netflix.config.ConcurrentCompositeConfiguration@8bd076a
+2019-08-02 22:28:09.613  INFO 8392 --- [main] o.s.cloud.commons.util.InetUtils         : Cannot determine local hostname
+2019-08-02 22:28:09.980  INFO 8392 --- [main] o.s.b.a.e.web.ServletEndpointRegistrar   : Registered '/actuator/hystrix.stream' to hystrix.stream-actuator-endpoint
+2019-08-02 22:28:11.566  INFO 8392 --- [main] o.s.cloud.commons.util.InetUtils         : Cannot determine local hostname
+2019-08-02 22:28:12.224  WARN 8392 --- [main] c.n.c.sources.URLConfigurationSource     : No URLs will be polled as dynamic configuration sources.
+2019-08-02 22:28:12.231  INFO 8392 --- [main] c.n.c.sources.URLConfigurationSource     : To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2019-08-02 22:28:12.501  INFO 8392 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2019-08-02 22:28:12.954  INFO 8392 --- [main] .s.s.UserDetailsServiceAutoConfiguration : 
+
+Using generated security password: 1b331600-6c57-40bb-aa81-cc4b95a6d12f
+
+2019-08-02 22:28:13.202  INFO 8392 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@4abbe41c, org.springframework.security.web.context.SecurityContextPersistenceFilter@1c72189f, org.springframework.security.web.header.HeaderWriterFilter@45d389f2, org.springframework.security.web.authentication.logout.LogoutFilter@5fb07347, org.springframework.security.oauth2.provider.authentication.OAuth2AuthenticationProcessingFilter@3ed7dd70, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@58882a93, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@7f93f4c, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@4fad51a3, org.springframework.security.web.session.SessionManagementFilter@5112b7, org.springframework.security.web.access.ExceptionTranslationFilter@6aad919c, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@3d1c52f5]
+2019-08-02 22:28:13.306  INFO 8392 --- [main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 21 endpoint(s) beneath base path '/actuator'
+2019-08-02 22:28:13.523  INFO 8392 --- [main] o.s.c.n.eureka.InstanceInfoFactory       : Setting initial instance status as: STARTING
+2019-08-02 22:28:13.556  INFO 8392 --- [main] com.netflix.discovery.DiscoveryClient    : Initializing Eureka in region us-east-1
+2019-08-02 22:28:13.649  INFO 8392 --- [main] c.n.d.provider.DiscoveryJerseyProvider   : Using JSON encoding codec LegacyJacksonJson
+2019-08-02 22:28:13.649  INFO 8392 --- [main] c.n.d.provider.DiscoveryJerseyProvider   : Using JSON decoding codec LegacyJacksonJson
+2019-08-02 22:28:13.760  INFO 8392 --- [main] c.n.d.provider.DiscoveryJerseyProvider   : Using XML encoding codec XStreamXml
+2019-08-02 22:28:13.761  INFO 8392 --- [main] c.n.d.provider.DiscoveryJerseyProvider   : Using XML decoding codec XStreamXml
+2019-08-02 22:28:13.951  INFO 8392 --- [main] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2019-08-02 22:28:14.308  INFO 8392 --- [main] com.netflix.discovery.DiscoveryClient    : Disable delta property : false
+2019-08-02 22:28:14.315  INFO 8392 --- [main] com.netflix.discovery.DiscoveryClient    : Single vip registry refresh property : null
+2019-08-02 22:28:14.315  INFO 8392 --- [main] com.netflix.discovery.DiscoveryClient    : Force full registry fetch : false
+2019-08-02 22:28:14.315  INFO 8392 --- [main] com.netflix.discovery.DiscoveryClient    : Application is null : false
+2019-08-02 22:28:14.315  INFO 8392 --- [main] com.netflix.discovery.DiscoveryClient    : Registered Applications size is zero : true
+2019-08-02 22:28:14.321  INFO 8392 --- [main] com.netflix.discovery.DiscoveryClient    : Application version is -1: true
+2019-08-02 22:28:14.322  INFO 8392 --- [main] com.netflix.discovery.DiscoveryClient    : Getting all instance registry info from the eureka server
+2019-08-02 22:28:14.450  INFO 8392 --- [main] com.netflix.discovery.DiscoveryClient    : The response status is 200
+2019-08-02 22:28:14.453  INFO 8392 --- [main] com.netflix.discovery.DiscoveryClient    : Starting heartbeat executor: renew interval is: 30
+2019-08-02 22:28:14.461  INFO 8392 --- [main] c.n.discovery.InstanceInfoReplicator     : InstanceInfoReplicator onDemand update allowed rate per min is 4
+2019-08-02 22:28:14.465  INFO 8392 --- [main] com.netflix.discovery.DiscoveryClient    : Discovery Client initialized at timestamp 1564752494463 with initial instances count: 3
+2019-08-02 22:28:14.468  INFO 8392 --- [main] o.s.c.n.e.s.EurekaServiceRegistry        : Registering application HARANG with eureka with status UP
+2019-08-02 22:28:14.469  INFO 8392 --- [main] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1564752494469, current=UP, previous=STARTING]
+2019-08-02 22:28:14.471  INFO 8392 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_HARANG/localhost:harang:8080: registering service...
+2019-08-02 22:28:14.517  INFO 8392 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_HARANG/localhost:harang:8080 - registration status: 204
+2019-08-02 22:28:14.523  INFO 8392 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2019-08-02 22:28:14.523  INFO 8392 --- [main] .s.c.n.e.s.EurekaAutoServiceRegistration : Updating port to 8080
+2019-08-02 22:28:14.530  INFO 8392 --- [main] c.t.bnk.MsaSa02BnkSvcHarangApplication   : Started MsaSa02BnkSvcHarangApplication in 14.337 seconds (JVM running for 15.617)
+2019-08-02 22:28:16.853  INFO 8392 --- [RMI TCP Connection(3)-127.0.0.1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2019-08-02 22:28:16.858  INFO 8392 --- [RMI TCP Connection(3)-127.0.0.1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2019-08-02 22:28:16.870  INFO 8392 --- [RMI TCP Connection(3)-127.0.0.1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 12 ms
+2019-08-02 22:29:26.420  INFO 8392 --- [http-nio-8080-exec-1] com.tyn.bnk.utils.UserContextFilter      : Harang.UserContextFilter Correlation id: 2bfc631a-900a-4531-aefb-8c36936ecf89
+2019-08-02 22:29:26.456  INFO 8392 --- [http-nio-8080-exec-1] c.t.bnk.service.impl.SimpleServiceImpl   : I am using the rest client
+2019-08-02 22:30:17.351  INFO 8392 --- [http-nio-8080-exec-2] com.tyn.bnk.utils.UserContextFilter      : Harang.UserContextFilter Correlation id: 68137e4f-ce23-4b33-a209-d24108693589
+2019-08-02 22:30:17.361  INFO 8392 --- [http-nio-8080-exec-2] c.t.bnk.service.impl.SimpleServiceImpl   : I am using the rest client
+2019-08-02 22:30:23.835  INFO 8392 --- [http-nio-8080-exec-3] com.tyn.bnk.utils.UserContextFilter      : Harang.UserContextFilter Correlation id: cbad1a6b-1ea7-4f26-9baa-adb6c4a21871
+2019-08-02 22:30:23.847  INFO 8392 --- [http-nio-8080-exec-3] c.t.bnk.service.impl.SimpleServiceImpl   : I am using the rest client
+2019-08-02 22:31:49.644  INFO 8392 --- [RMI TCP Connection(14)-127.0.0.1] inMXBeanRegistrar$SpringApplicationAdmin : Application shutdown requested.
+2019-08-02 22:31:49.649  INFO 8392 --- [RMI TCP Connection(14)-127.0.0.1] o.s.c.n.e.s.EurekaServiceRegistry        : Unregistering application HARANG with eureka with status DOWN
+2019-08-02 22:31:49.653  WARN 8392 --- [RMI TCP Connection(14)-127.0.0.1] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1564752709653, current=DOWN, previous=UP]
+2019-08-02 22:31:49.654  INFO 8392 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_HARANG/localhost:harang:8080: registering service...
+2019-08-02 22:31:49.657  INFO 8392 --- [RMI TCP Connection(14)-127.0.0.1] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2019-08-02 22:31:49.664  INFO 8392 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_HARANG/localhost:harang:8080 - registration status: 204
+2019-08-02 22:31:49.675  INFO 8392 --- [RMI TCP Connection(14)-127.0.0.1] com.netflix.discovery.DiscoveryClient    : Shutting down DiscoveryClient ...
+2019-08-02 22:31:52.677  INFO 8392 --- [RMI TCP Connection(14)-127.0.0.1] com.netflix.discovery.DiscoveryClient    : Unregistering ...
+2019-08-02 22:31:52.702  INFO 8392 --- [RMI TCP Connection(14)-127.0.0.1] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_HARANG/localhost:harang:8080 - deregister  status: 200
+2019-08-02 22:31:52.718  INFO 8392 --- [RMI TCP Connection(14)-127.0.0.1] com.netflix.discovery.DiscoveryClient    : Completed shut down of DiscoveryClient
+2019-08-02 22:31:52.985  INFO 8392 --- [RMI TCP Connection(14)-127.0.0.1] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2019-08-02 22:31:52.988  INFO 8392 --- [RMI TCP Connection(14)-127.0.0.1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Destroying Spring FrameworkServlet 'dispatcherServlet'
+2019-08-02 22:31:52.992  WARN 8392 --- [RMI TCP Connection(14)-127.0.0.1] o.a.c.loader.WebappClassLoaderBase       : The web application [ROOT] appears to have started a thread named [RxIoScheduler-1 (Evictor)] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
+ sun.misc.Unsafe.park(Native Method)
+ java.util.concurrent.locks.LockSupport.parkNanos(LockSupport.java:215)
+ java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.awaitNanos(AbstractQueuedSynchronizer.java:2078)
+ java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(ScheduledThreadPoolExecutor.java:1093)
+ java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(ScheduledThreadPoolExecutor.java:809)
+ java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1067)
+ java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1127)
+ java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+ java.lang.Thread.run(Thread.java:745)
